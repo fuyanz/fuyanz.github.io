@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>居中布局的方法</title>
+      <link href="2021/04/02/%E5%B1%85%E4%B8%AD%E5%B8%83%E5%B1%80%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+      <url>2021/04/02/%E5%B1%85%E4%B8%AD%E5%B8%83%E5%B1%80%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<p>##基础居中布局</p><pre class="line-numbers language-<style>" data-language="<style>"><code class="language-<style>">    .wrap&#123;        width:1000px;        margin:0 auto;    &#125;&lt;&#x2F;style&gt;&lt;div class&#x3D;&quot;nav wrap&quot;&gt;&lt;&#x2F;div&gt;&lt;div class&#x3D;&quot;header wrap&quot;&gt;&lt;&#x2F;div&gt;&lt;div class&#x3D;&quot;footer wrap&quot;&gt;&lt;&#x2F;div&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>##无论屏幕大小多少，都能看到中间的主要内容并居中显示<br>###背景居中</p><pre class="line-numbers language-none"><code class="language-none">&lt;style&gt;    body&#123;        margin:0;        padding:0;    &#125;    .box&#123;        height:400px;        min-width：1000px;        background-image:图片地址;        background-position:center -80px;    &#125;&lt;&#x2F;style&gt;&lt;div class&#x3D;&quot;box&quot;&gt;&lt;&#x2F;div&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>有缺点，关键为center</p><p>##img定位</p><p>假设图片大小：1920x高</p><p>希望图片向左移动的距离：</p><p>​    = 图片宽度乘0.5 - div宽度乘0.5</p><p>​    =960px - div宽度*0.5</p><p>解释：<br><img src="https://cdn.jsdelivr.net/gh/fuyanz/picture@main/image/blogphoto/1617373737303-1617373737296.png"><br><code>向左移动img的一半,向右移动父元素的一半</code></p><pre class="line-numbers language-none"><code class="language-none">&lt;style&gt;    body&#123;        margin:0;        padding:0;    &#125;    .box&#123;        overflow:hidden;    &#125;    .box img&#123;        &#x2F;*向左移动img的一半*&#x2F;        position:relative;        left：-960px;&#x2F;*transform:translate(-50%);*&#x2F;         &#x2F;*向右移动父元素（.box)的一半*&#x2F;        margin-left:50%;       &#125;&lt;&#x2F;style&gt;&lt;div class&#x3D;&quot;box&quot;&gt;    &lt;img src&#x3D;&quot;图片地址&quot;&gt;&lt;&#x2F;div&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>line-height</title>
       <link href="2021/04/02/line-height/"/>
       <url>2021/04/02/line-height/</url>
