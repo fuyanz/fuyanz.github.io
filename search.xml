@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>JavaScript---理解原型与原型链</title>
+      <link href="2021/04/02/JavaScript-%E7%90%86%E8%A7%A3%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/"/>
+      <url>2021/04/02/JavaScript-%E7%90%86%E8%A7%A3%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/</url>
+      
+        <content type="html"><![CDATA[<p><strong>所有对象都有<code>_proto_</code>属性，但是只有函数拥有<code>prototype</code></strong><br><strong><code>_proto_</code><strong>是一个访问器属性，它指向的是</strong>它的构造函数的原型<code>prototype</code></strong><br>能通过<code>prototype</code>给函数添加<strong>原型属性</strong><br>而实例能通过<code>_proto_</code>访问构造函数的原型或方法。</p><p>每一个函数都属于原始构造函数<code>function</code>的实例，而每一个函数又能作为构造函数生产属于自己的实例</p><p>##js获取原型的方法</p><pre class="line-numbers language-js" data-language="js"><code class="language-js">p<span class="token punctuation">.</span>__proto__p<span class="token punctuation">.</span>constructor<span class="token punctuation">.</span>prototypeObject<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+          <category> 前端JavaScirpt知识 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> 前端知识 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>flex弹性布局</title>
       <link href="2021/04/02/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/"/>
       <url>2021/04/02/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/</url>
