@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ajax,网络请求">
+    <meta name="keywords" content="flex,弹性布局">
     <meta name="description" content="flyall的博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>ajax发起网络请求---手写的三种方式 | flyall</title>
+    <title>flex弹性布局 | flyall</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">ajax发起网络请求---手写的三种方式</h1>
+                    <h1 class="description center-align post-title">flex弹性布局</h1>
                 </div>
             </div>
         </div>
@@ -431,12 +431,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/ajax/">
-                                <span class="chip bg-color">ajax</span>
+                            <a href="/tags/flex/">
+                                <span class="chip bg-color">flex</span>
                             </a>
                         
-                            <a href="/tags/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-ajax/">
-                                <span class="chip bg-color">前端笔记-ajax</span>
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%89%8D%E7%AB%AF%E5%B8%83%E5%B1%80%E7%9F%A5%E8%AF%86/">
+                                <span class="chip bg-color">前端布局知识</span>
                             </a>
                         
                     </div>
@@ -451,12 +455,12 @@
                                 前端
                             </a>
                         
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/ajax/" class="post-category">
-                                ajax
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/felx/" class="post-category">
+                                felx
                             </a>
                         
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/ajax/%E5%8F%91%E8%B5%B7%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/" class="post-category">
-                                发起网络请求
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/felx/%E5%89%8D%E7%AB%AF%E5%B8%83%E5%B1%80%E7%9F%A5%E8%AF%86/" class="post-category">
+                                前端布局知识
                             </a>
                         
                     </div>
@@ -497,76 +501,51 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>我们需要熟练掌握ajax发送网络请求。这里是发起网络请求的三种方式：<br>    原生js发送ajax网络请求<br>    JQuery发送ajax网络请求<br>    promise封装发送ajax网络请求</p>
-<hr>
-<h2 id="原生js发送ajax请求"><a href="#原生js发送ajax请求" class="headerlink" title="原生js发送ajax请求"></a>原生js发送ajax请求</h2><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">//1：创建Ajax对象</span>
-	<span class="token keyword">var</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">xmlHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span>					
-<span class="token comment">//2：配置 Ajax请求地址</span>
-	xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span>请求方式<span class="token punctuation">,</span>url<span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">//3：发送请求</span>
-	xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-<span class="token comment">//4:监听请求，接受响应</span>
-	xhr<span class="token punctuation">.</span><span class="token function-variable function">onloadend</span><span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-     	<span class="token keyword">if</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>status<span class="token operator">==</span><span class="token number">200</span><span class="token punctuation">)</span>
-            
-	<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<hr>
-<h2 id="JQuery发送ajax网络请求"><a href="#JQuery发送ajax网络请求" class="headerlink" title="JQuery发送ajax网络请求"></a>JQuery发送ajax网络请求</h2><pre class="line-numbers language-js" data-language="js"><code class="language-js">$<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
-          type<span class="token operator">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
-          url<span class="token operator">:</span><span class="token string">''</span><span class="token punctuation">,</span>
-          data<span class="token operator">:</span>data<span class="token punctuation">,</span>
-          dataType<span class="token operator">:</span><span class="token string">'json'</span><span class="token punctuation">,</span>
-          <span class="token function-variable function">success</span><span class="token operator">:</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">msg</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-
-          <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-          <span class="token function-variable function">error</span><span class="token operator">:</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-
-          <span class="token punctuation">&#125;</span>
-          <span class="token function-variable function">complete</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-          
-      	  <span class="token punctuation">&#125;</span>
-      <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<hr>
-<h2 id="promise封装实现ajax网络请求"><a href="#promise封装实现ajax网络请求" class="headerlink" title="promise封装实现ajax网络请求"></a>promise封装实现ajax网络请求</h2><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">getJSON</span><span class="token punctuation">(</span><span class="token parameter">url</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
- 	 <span class="token comment">// 创建一个 promise 对象</span>
-  	<span class="token keyword">let</span> promise <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-   		<span class="token keyword">let</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    	<span class="token comment">// 新建一个 http 请求</span>
-   		xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">"GET"</span><span class="token punctuation">,</span> url<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    	<span class="token comment">// 设置状态的监听函数</span>
-    	xhr<span class="token punctuation">.</span><span class="token function-variable function">onloadend</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-
-      	<span class="token comment">// 当请求成功或失败时，改变 promise 的状态</span>
-      		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        		<span class="token function">resolve</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span class="token punctuation">;</span>
-     		<span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
-        		<span class="token function">reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      		<span class="token punctuation">&#125;</span>
-    	<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
-
-    	<span class="token comment">// 设置错误监听函数</span>
-    		xhr<span class="token punctuation">.</span><span class="token function-variable function">onerror</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-      			<span class="token function">reject</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>statusText<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    		<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
-
-    	<span class="token comment">// 设置响应的数据类型</span>
-    	xhr<span class="token punctuation">.</span>responseType <span class="token operator">=</span> <span class="token string">"json"</span><span class="token punctuation">;</span>
-
-    	<span class="token comment">// 设置请求头信息</span>
-    	xhr<span class="token punctuation">.</span><span class="token function">setRequestHeader</span><span class="token punctuation">(</span><span class="token string">"content-type"</span><span class="token punctuation">,</span> <span class="token string">"application/json"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    	<span class="token comment">// 发送 http 请求</span>
-    	xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  		<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  	<span class="token keyword">return</span> promise<span class="token punctuation">;</span>
-	<span class="token punctuation">&#125;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+                <p>弹性布局</p>
+<p>主要在移动端使用，目前pc端也在使用</p>
+<p>🐇开启了flex布局的元素叫 <code>flex container</code></p>
+<p>🐇flex container 里面的直接子元素叫做 <code>flex items</code></p>
+<p>🐕设置display属性为flex或者inline-flex可以成为 flex container</p>
+<p>🎄flex：flex container 以block-level的形式存在</p>
+<p>🎄inline-flex：flex container 以inline-level的形式存在</p>
+<h3 id="flex布局模型"><a href="#flex布局模型" class="headerlink" title="flex布局模型"></a>flex布局模型</h3><p>⭐横方向：叫主轴 main axis</p>
+<p>⭐竖方向：叫交叉轴 cross axis</p>
+<h4 id="应用在flex-container上的css属性"><a href="#应用在flex-container上的css属性" class="headerlink" title="应用在flex container上的css属性"></a>应用在flex container上的css属性</h4><ul>
+<li>flex-flow</li>
+<li>flex-direction</li>
+<li>flex-wrap</li>
+<li>justify-content</li>
+<li>align-items</li>
+<li>align-content</li>
+</ul>
+<h5 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction"></a>flex-direction</h5><p>flex items 默认是沿着main axis（主轴）从main start 开始向main end的方向排布</p>
+<p><code>决定了main axis的方向</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/fuyanz/picture@main/image/blogphoto/1617348934203-1617348934200.png"></p>
+<h5 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content"></a>justify-content</h5><p><code>决定了flex items在main axis上的对其方式</code><br><img src="https://cdn.jsdelivr.net/gh/fuyanz/picture@main/image/blogphoto/1617348823929-1617348823924.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/fuyanz/picture@main/image/blogphoto/1617348708838-1617348708831.png"></p>
+<h5 id="align-items"><a href="#align-items" class="headerlink" title="align-items"></a>align-items</h5><p><code>align-items决定了flex items在cross axis上的对齐方式</code><br><img src="https://cdn.jsdelivr.net/gh/fuyanz/picture@main/image/blogphoto/1617348848175-1617348848171.png"><br><img src="https://cdn.jsdelivr.net/gh/fuyanz/picture@main/image/blogphoto/1617348751891-1617348751883.png"></p>
+<h5 id="flex-wrap"><a href="#flex-wrap" class="headerlink" title="flex-wrap"></a>flex-wrap</h5><p><code>flex-wrap决定了flex container 是单行还是多行</code></p>
+<p>默认情况下，所有的flex items都会在同一行显示<br><img src="https://cdn.jsdelivr.net/gh/fuyanz/picture@main/image/blogphoto/1617348978460-1617348978457.png"></p>
+<h5 id="align-content"><a href="#align-content" class="headerlink" title="align-content"></a>align-content</h5><p><code>align-content决定了多行flex items在cross axis上的对齐方式，用法uijustify-content类似</code><br><img src="https://cdn.jsdelivr.net/gh/fuyanz/picture@main/image/blogphoto/1617349023856-1617349023850.png"></p>
+<h4 id="应用在flex-items-上的css属性"><a href="#应用在flex-items-上的css属性" class="headerlink" title="应用在flex items 上的css属性"></a>应用在flex items 上的css属性</h4><ul>
+<li>flex</li>
+<li>flex-grow</li>
+<li>flex-basis</li>
+<li>flex-shrink</li>
+<li>order</li>
+<li>align-self</li>
+</ul>
+<h4 id="order"><a href="#order" class="headerlink" title="order"></a>order</h4><p><code>order决定了flex items的排布顺序</code></p>
+<p>​    可以设置任意整数（正整数，负整数，0），值越小就越排在前面</p>
+<p>​    默认是0</p>
+<h5 id="align-self"><a href="#align-self" class="headerlink" title="align-self"></a>align-self</h5><p><code>flex items可以通过align-self覆盖flex container设置的align-items</code></p>
+<p>​    auto: 默认值，遵从flex container的align-items设置</p>
+<p>​    stretch、flex-start、flex-end、center、baseline，效果和align-items一致</p>
+<h5 id="flex-grow"><a href="#flex-grow" class="headerlink" title="flex-grow"></a>flex-grow</h5><p><code>flex-grow决定了flex items如何扩展</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/fuyanz/picture@main/image/blogphoto/1617349799870-1617349799866.png"></p>
+<h5 id="flex-shrink"><a href="#flex-shrink" class="headerlink" title="flex-shrink"></a>flex-shrink</h5><p><code>flex-shrink决定了flex items如何收缩</code><br><img src="https://cdn.jsdelivr.net/gh/fuyanz/picture@main/image/blogphoto/1617349859697-1617349859691.png"></p>
+<h5 id="flex-basis"><a href="#flex-basis" class="headerlink" title="flex-basis"></a>flex-basis</h5><p><code>flex-basis用来设置flex items在main axis方向上的 base size</code><br><img src="https://cdn.jsdelivr.net/gh/fuyanz/picture@main/image/blogphoto/1617349880708-1617349880705.png"></p>
+<p>####⭐flex<br><img src="https://cdn.jsdelivr.net/gh/fuyanz/picture@main/image/blogphoto/1617349900251-1617349900244.png"></p>
 
                 
             </div>
@@ -593,7 +572,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://fuyanz.github.io/2021/04/02/Ajax%E5%8F%91%E9%80%81%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82-%E6%89%8B%E5%86%99%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/">https://fuyanz.github.io/2021/04/02/Ajax%E5%8F%91%E9%80%81%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82-%E6%89%8B%E5%86%99%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/</a>
+                    <a href="https://fuyanz.github.io/2021/04/02/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/">https://fuyanz.github.io/2021/04/02/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -631,12 +610,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/ajax/">
-                                    <span class="chip bg-color">ajax</span>
+                                <a href="/tags/flex/">
+                                    <span class="chip bg-color">flex</span>
                                 </a>
                             
-                                <a href="/tags/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-ajax/">
-                                    <span class="chip bg-color">前端笔记-ajax</span>
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%89%8D%E7%AB%AF%E5%B8%83%E5%B1%80%E7%9F%A5%E8%AF%86/">
+                                    <span class="chip bg-color">前端布局知识</span>
                                 </a>
                             
                         </div>
@@ -806,9 +789,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/04/02/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/">
                     <div class="card-image">
@@ -826,9 +810,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -849,6 +833,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -875,19 +860,19 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/02/testposter/">
+                <a href="/2021/04/02/Ajax%E5%8F%91%E9%80%81%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82-%E6%89%8B%E5%86%99%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="欢迎来到flyall的空间~">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="ajax发起网络请求---手写的三种方式">
                         
-                        <span class="card-title">欢迎来到flyall的空间~</span>
+                        <span class="card-title">ajax发起网络请求---手写的三种方式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            笔记收集查看地--今日完成
+                            ajax发起网络请求---手写的三种方式
                         
                     </div>
                     <div class="publish-info">
@@ -898,13 +883,33 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%9A%8F%E7%AC%94%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    随笔记录
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/ajax/" class="post-category">
+                                    ajax
+                                </a>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/ajax/%E5%8F%91%E8%B5%B7%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/" class="post-category">
+                                    发起网络请求
                                 </a>
                             
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ajax/">
+                        <span class="chip bg-color">ajax</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-ajax/">
+                        <span class="chip bg-color">前端笔记-ajax</span>
+                    </a>
+                    
                 </div>
                 
             </div>
