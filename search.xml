@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>margin的父子上下传递和上下折叠问题</title>
+      <link href="2021/04/02/margin%E7%9A%84%E7%88%B6%E5%AD%90%E4%B8%8A%E4%B8%8B%E4%BC%A0%E9%80%92%E5%92%8C%E4%B8%8A%E4%B8%8B%E6%8A%98%E5%8F%A0%E9%97%AE%E9%A2%98/"/>
+      <url>2021/04/02/margin%E7%9A%84%E7%88%B6%E5%AD%90%E4%B8%8A%E4%B8%8B%E4%BC%A0%E9%80%92%E5%92%8C%E4%B8%8A%E4%B8%8B%E6%8A%98%E5%8F%A0%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<h1 id="margin的父子上下传递"><a href="#margin的父子上下传递" class="headerlink" title="margin的父子上下传递"></a>margin的父子上下传递</h1><p>左右不会传递</p><h2 id="margin-top传递"><a href="#margin-top传递" class="headerlink" title="margin -top传递"></a>margin -top传递</h2><p>如果 <strong>块级</strong>元素的<em>顶部线</em>和父元素的<em>顶部线</em>重叠，那么这个 <strong>块级</strong>元素的margin-top值会传递给父元素</p><h2 id="margin-bottom传递"><a href="#margin-bottom传递" class="headerlink" title="margin-bottom传递"></a>margin-bottom传递</h2><p>如果 <strong>块级</strong>元素的<em>底部线</em>和父元素的<em>底部线</em>重叠，并且父元素的高度是auto，那么这个 <strong>块级</strong>元素的margin-bottom会传递给父元素</p><h2 id="如何防止出现传递问题"><a href="#如何防止出现传递问题" class="headerlink" title="如何防止出现传递问题"></a>如何防止出现传递问题</h2><ol><li>给父元素设置 padding-top、padding-bottom</li><li>给父元素设置 border</li><li>触发BFC: 设置overflow为auto\hidden</li></ol><p><strong>建议：</strong></p><p>margin一般用来设置兄弟元素之间的间距</p><p>padding一般用来设置父子之间的间距</p><h5 id="如何触发BFC："><a href="#如何触发BFC：" class="headerlink" title="如何触发BFC："></a>如何触发BFC：</h5><p>bfc相当于一个结界</p><ul><li>浮动触发</li><li>设置一个元素的overflow为非visible<ul><li>hidden</li><li>auto</li><li>scroll</li></ul></li></ul><h2 id="上下margin折叠"><a href="#上下margin折叠" class="headerlink" title="上下margin折叠"></a>上下margin折叠</h2><p>垂直方向上相邻的2个margin（margin-top、margin-bottom）有可能会合并为1个margin，这种现象叫做collapse（折叠）</p><p>水平方向上的永远不会折叠</p><p><strong>折叠后的计算规则</strong></p><p>两个值进行比较，取较大的值</p><p><strong>如何防止折叠</strong></p><p>只设置其中一个元素的margin</p><p><img src="https://cdn.jsdelivr.net/gh/fuyanz/picture@main/image/blogphoto/1617375748186-1617375748178.png"></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>居中布局的方法</title>
       <link href="2021/04/02/%E5%B1%85%E4%B8%AD%E5%B8%83%E5%B1%80%E7%9A%84%E6%96%B9%E6%B3%95/"/>
       <url>2021/04/02/%E5%B1%85%E4%B8%AD%E5%B8%83%E5%B1%80%E7%9A%84%E6%96%B9%E6%B3%95/</url>
