@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="欢迎来到flyall的空间~, flyall">
+    <meta name="keywords" content="ajax发送网络请求---手写的三种方式, flyall">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>欢迎来到flyall的空间~ | flyall</title>
+    <title>ajax发送网络请求---手写的三种方式 | flyall</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">欢迎来到flyall的空间~</h1>
+                    <h1 class="description center-align post-title">ajax发送网络请求---手写的三种方式</h1>
                 </div>
             </div>
         </div>
@@ -431,8 +431,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                                <span class="chip bg-color">随笔</span>
+                            <a href="/tags/ajax/">
+                                <span class="chip bg-color">ajax</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">前端笔记</span>
                             </a>
                         
                     </div>
@@ -476,10 +480,76 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>​    几经波折，苦熬3天，终于大致完成我的博客搭建。可能存在着很多问题，但已经开始了，就要坚持！</p>
-<p>​    看来要随手记笔记，也要按照步骤走。有时会带有一定运气的成分。选择最优的，最完美的东西。反正得保留一些强迫症。</p>
-<p>​    鉴于博客园的不稳定，自己搞一个博客是非常有必要的。这样就不怕别人的服务器炸了。想拥有自己的博客收集地。今天完成了！</p>
-<p>​    今天完成了✌</p>
+                <p>我们需要熟练掌握ajax发送网络请求。这里是发起网络请求的三种方式：<br>    原生js发送ajax网络请求<br>    JQuery发送ajax网络请求<br>    promise封装发送ajax网络请求</p>
+<hr>
+<h2 id="原生js发送ajax请求"><a href="#原生js发送ajax请求" class="headerlink" title="原生js发送ajax请求"></a>原生js发送ajax请求</h2><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">//1：创建Ajax对象</span>
+	<span class="token keyword">var</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">xmlHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span>					
+<span class="token comment">//2：配置 Ajax请求地址</span>
+	xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span>请求方式<span class="token punctuation">,</span>url<span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//3：发送请求</span>
+	xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token comment">//4:监听请求，接受响应</span>
+	xhr<span class="token punctuation">.</span><span class="token function-variable function">onloadend</span><span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+     	<span class="token keyword">if</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>status<span class="token operator">==</span><span class="token number">200</span><span class="token punctuation">)</span>
+            
+	<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h2 id="JQuery发送ajax网络请求"><a href="#JQuery发送ajax网络请求" class="headerlink" title="JQuery发送ajax网络请求"></a>JQuery发送ajax网络请求</h2><pre class="line-numbers language-js" data-language="js"><code class="language-js">$<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+          type<span class="token operator">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
+          url<span class="token operator">:</span><span class="token string">''</span><span class="token punctuation">,</span>
+          data<span class="token operator">:</span>data<span class="token punctuation">,</span>
+          dataType<span class="token operator">:</span><span class="token string">'json'</span><span class="token punctuation">,</span>
+          <span class="token function-variable function">success</span><span class="token operator">:</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">msg</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+
+          <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+          <span class="token function-variable function">error</span><span class="token operator">:</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+
+          <span class="token punctuation">&#125;</span>
+          <span class="token function-variable function">complete</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+          
+      	  <span class="token punctuation">&#125;</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h2 id="promise封装实现ajax网络请求"><a href="#promise封装实现ajax网络请求" class="headerlink" title="promise封装实现ajax网络请求"></a>promise封装实现ajax网络请求</h2><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">getJSON</span><span class="token punctuation">(</span><span class="token parameter">url</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+ 	 <span class="token comment">// 创建一个 promise 对象</span>
+  	<span class="token keyword">let</span> promise <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+   		<span class="token keyword">let</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    	<span class="token comment">// 新建一个 http 请求</span>
+   		xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">"GET"</span><span class="token punctuation">,</span> url<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    	<span class="token comment">// 设置状态的监听函数</span>
+    	xhr<span class="token punctuation">.</span><span class="token function-variable function">onloadend</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+
+      	<span class="token comment">// 当请求成功或失败时，改变 promise 的状态</span>
+      		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        		<span class="token function">resolve</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     		<span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+        		<span class="token function">reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      		<span class="token punctuation">&#125;</span>
+    	<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+    	<span class="token comment">// 设置错误监听函数</span>
+    		xhr<span class="token punctuation">.</span><span class="token function-variable function">onerror</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      			<span class="token function">reject</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>statusText<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    		<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+    	<span class="token comment">// 设置响应的数据类型</span>
+    	xhr<span class="token punctuation">.</span>responseType <span class="token operator">=</span> <span class="token string">"json"</span><span class="token punctuation">;</span>
+
+    	<span class="token comment">// 设置请求头信息</span>
+    	xhr<span class="token punctuation">.</span><span class="token function">setRequestHeader</span><span class="token punctuation">(</span><span class="token string">"content-type"</span><span class="token punctuation">,</span> <span class="token string">"application/json"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    	<span class="token comment">// 发送 http 请求</span>
+    	xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  		<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  	<span class="token keyword">return</span> promise<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -506,7 +576,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://fuyanz.github.io/2021/04/02/testposter/">https://fuyanz.github.io/2021/04/02/testposter/</a>
+                    <a href="https://fuyanz.github.io/2021/04/02/Ajax%E5%8F%91%E9%80%81%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82-%E6%89%8B%E5%86%99%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/">https://fuyanz.github.io/2021/04/02/Ajax%E5%8F%91%E9%80%81%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82-%E6%89%8B%E5%86%99%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -544,8 +614,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                                    <span class="chip bg-color">随笔</span>
+                                <a href="/tags/ajax/">
+                                    <span class="chip bg-color">ajax</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">前端笔记</span>
                                 </a>
                             
                         </div>
@@ -715,9 +789,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/04/02/Ajax%E5%8F%91%E9%80%81%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82-%E6%89%8B%E5%86%99%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/">
                     <div class="card-image">
@@ -735,9 +810,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -746,6 +821,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -768,13 +844,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/02/hello-world/">
+                <a href="/2021/04/02/testposter/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="欢迎来到flyall的空间~">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">欢迎来到flyall的空间~</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -794,6 +870,14 @@
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                        <span class="chip bg-color">随笔</span>
+                    </a>
+                    
                 </div>
                 
             </div>
