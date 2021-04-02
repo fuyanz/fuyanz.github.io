@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JavaScript,原型与原型链">
+    <meta name="keywords" content="CSS,line-height">
     <meta name="description" content="flyall的博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JavaScript---理解原型与原型链 | flyall</title>
+    <title>line-height | flyall</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JavaScript---理解原型与原型链</h1>
+                    <h1 class="description center-align post-title">line-height</h1>
                 </div>
             </div>
         </div>
@@ -435,12 +435,12 @@
                                 <span class="chip bg-color">前端</span>
                             </a>
                         
-                            <a href="/tags/JavaScript/">
-                                <span class="chip bg-color">JavaScript</span>
-                            </a>
-                        
                             <a href="/tags/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86/">
                                 <span class="chip bg-color">前端知识</span>
+                            </a>
+                        
+                            <a href="/tags/CSS/">
+                                <span class="chip bg-color">CSS</span>
                             </a>
                         
                     </div>
@@ -455,8 +455,8 @@
                                 前端
                             </a>
                         
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AFJavaScirpt%E7%9F%A5%E8%AF%86/" class="post-category">
-                                前端JavaScirpt知识
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AFCSS%E7%9F%A5%E8%AF%86/" class="post-category">
+                                前端CSS知识
                             </a>
                         
                     </div>
@@ -497,12 +497,24 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>所有对象都有<code>_proto_</code>属性，但是只有函数拥有<code>prototype</code></strong><br><strong><code>_proto_</code><strong>是一个访问器属性，它指向的是</strong>它的构造函数的原型<code>prototype</code></strong><br>能通过<code>prototype</code>给函数添加<strong>原型属性</strong><br>而实例能通过<code>_proto_</code>访问构造函数的原型或方法。</p>
-<p>每一个函数都属于原始构造函数<code>function</code>的实例，而每一个函数又能作为构造函数生产属于自己的实例</p>
-<p>##js获取原型的方法</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js">p<span class="token punctuation">.</span>__proto__
-p<span class="token punctuation">.</span>constructor<span class="token punctuation">.</span>prototype
-Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+                <p>设置文本的最小行高</p>
+<p>行高可以理解为一行文字所占据的高度</p>
+<p>两行文字baseline之间的间距<br><img src="https://cdn.jsdelivr.net/gh/fuyanz/picture@main/image/blogphoto/1617372996749-1617372996723.png"></p>
+<h4 id="应用实例：假设div中只有一行文字让文字在div内部垂直居中"><a href="#应用实例：假设div中只有一行文字让文字在div内部垂直居中" class="headerlink" title="应用实例：假设div中只有一行文字让文字在div内部垂直居中"></a>应用实例：假设div中只有一行文字<code>让文字在div内部垂直居中</code></h4><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+    <span class="token selector">div</span><span class="token punctuation">&#123;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span>200px<span class="token punctuation">;</span>
+    <span class="token property">line-height</span><span class="token punctuation">:</span>200px<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span>red<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+  一行文字
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>line-height=文字的高度+行距</p>
+<p>上下行距平分</p>
+<p><code>行高等于height的时候</code>文字居中</p>
+
                 
             </div>
             <hr/>
@@ -528,7 +540,7 @@ Object<span class="token punctuation">.</span><span class="token function">getPr
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://fuyanz.github.io/2021/04/02/JavaScript-%E7%90%86%E8%A7%A3%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/">https://fuyanz.github.io/2021/04/02/JavaScript-%E7%90%86%E8%A7%A3%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/</a>
+                    <a href="https://fuyanz.github.io/2021/04/02/line-height/">https://fuyanz.github.io/2021/04/02/line-height/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -570,12 +582,12 @@ Object<span class="token punctuation">.</span><span class="token function">getPr
                                     <span class="chip bg-color">前端</span>
                                 </a>
                             
-                                <a href="/tags/JavaScript/">
-                                    <span class="chip bg-color">JavaScript</span>
-                                </a>
-                            
                                 <a href="/tags/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86/">
                                     <span class="chip bg-color">前端知识</span>
+                                </a>
+                            
+                                <a href="/tags/CSS/">
+                                    <span class="chip bg-color">CSS</span>
                                 </a>
                             
                         </div>
@@ -745,9 +757,10 @@ Object<span class="token punctuation">.</span><span class="token function">getPr
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/04/02/line-height/">
                     <div class="card-image">
@@ -765,9 +778,9 @@ Object<span class="token punctuation">.</span><span class="token function">getPr
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -784,6 +797,7 @@ Object<span class="token punctuation">.</span><span class="token function">getPr
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -810,19 +824,19 @@ Object<span class="token punctuation">.</span><span class="token function">getPr
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/02/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/">
+                <a href="/2021/04/02/JavaScript-%E7%90%86%E8%A7%A3%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="flex弹性布局">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="JavaScript---理解原型与原型链">
                         
-                        <span class="card-title">flex弹性布局</span>
+                        <span class="card-title">JavaScript---理解原型与原型链</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            flex弹性布局
+                            原型与原型链
                         
                     </div>
                     <div class="publish-info">
@@ -837,12 +851,8 @@ Object<span class="token punctuation">.</span><span class="token function">getPr
                                     前端
                                 </a>
                             
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/flex/" class="post-category">
-                                    flex
-                                </a>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/flex/%E5%89%8D%E7%AB%AF%E5%B8%83%E5%B1%80%E7%9F%A5%E8%AF%86/" class="post-category">
-                                    前端布局知识
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AFJavaScirpt%E7%9F%A5%E8%AF%86/" class="post-category">
+                                    前端JavaScirpt知识
                                 </a>
                             
                             
@@ -852,16 +862,16 @@ Object<span class="token punctuation">.</span><span class="token function">getPr
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/flex/">
-                        <span class="chip bg-color">flex</span>
-                    </a>
-                    
                     <a href="/tags/%E5%89%8D%E7%AB%AF/">
                         <span class="chip bg-color">前端</span>
                     </a>
                     
-                    <a href="/tags/%E5%89%8D%E7%AB%AF%E5%B8%83%E5%B1%80%E7%9F%A5%E8%AF%86/">
-                        <span class="chip bg-color">前端布局知识</span>
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86/">
+                        <span class="chip bg-color">前端知识</span>
                     </a>
                     
                 </div>
