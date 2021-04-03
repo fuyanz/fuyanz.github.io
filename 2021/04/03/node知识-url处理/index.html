@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="node--文件I/O">
+    <meta name="keywords" content="node--url处理">
     <meta name="description" content="flyall的博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>node--文件I/O | flyall</title>
+    <title>node知识---url处理 | flyall</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">node--文件I/O</h1>
+                    <h1 class="description center-align post-title">node知识---url处理</h1>
                 </div>
             </div>
         </div>
@@ -493,114 +493,56 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="文件I-O"><a href="#文件I-O" class="headerlink" title="文件I/O"></a>文件I/O</h1><h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><h2 id="1-fs模块的基本用法"><a href="#1-fs模块的基本用法" class="headerlink" title="1.fs模块的基本用法"></a>1.<strong>fs模块的基本用法</strong></h2><ul>
-<li><p>文件的I/O需求—–node.js中提供了一个名为fs的模块来支持I/O操作</p>
+                <h1 id="url处理"><a href="#url处理" class="headerlink" title="url处理"></a>url处理</h1><h3 id="url模块的基本用法"><a href="#url模块的基本用法" class="headerlink" title="url模块的基本用法"></a>url模块的基本用法</h3><p>node.js为互联网而生，和url打交道是无法避免的了，url模块提供一些基础的url处理。</p>
+<h4 id="1-1-parse函数的基础用法"><a href="#1-1-parse函数的基础用法" class="headerlink" title="1.1 parse函数的基础用法"></a>1.1 parse函数的基础用法</h4><ul>
+<li><p>parse函数的作用是解析url</p>
 </li>
-<li><p>fs模块的文件I/O是对标准POSIX函数的简单封装</p>
-</li>
+<li><p>返回一个json格式的数组</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> url <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+url<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">'http://www.baidu.com'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
 </ul>
-<h3 id="1-1-writeFile函数的基本用法"><a href="#1-1-writeFile函数的基本用法" class="headerlink" title="1.1 writeFile函数的基本用法"></a>1.1 writeFile函数的基本用法</h3><h4 id="文件I-O-写入"><a href="#文件I-O-写入" class="headerlink" title="文件I/O 写入"></a>文件I/O 写入</h4><h5 id="writeFile函数-fs-writeFile-filename-data-callback"><a href="#writeFile函数-fs-writeFile-filename-data-callback" class="headerlink" title="writeFile函数     fs.writeFile(filename,data,callback)"></a>writeFile函数     fs.writeFile(filename,data,callback)</h5><ul>
-<li>fs模块提供writeFile函数，可以异步的将数据写入一个文件，如果文件存在则会被替换</li>
+<h5 id="parse函数—条件解析"><a href="#parse函数—条件解析" class="headerlink" title="parse函数—条件解析"></a>parse函数—条件解析</h5><ul>
+<li>parse函数的第二个参数是布尔类型</li>
+<li>当参数为true时，会将查询条件也解析成json格式的对象。</li>
 </ul>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> fs<span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"fs"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
- 
-fs<span class="token punctuation">.</span><span class="token function">writeFile</span><span class="token punctuation">(</span><span class="token string">'test.txt'</span><span class="token punctuation">,</span> <span class="token string">'Hello Node'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-   <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err<span class="token punctuation">;</span>
-   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Saved successfully'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//文件被保存</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> url <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+url<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">'http://www.baidu.com?page=1'</span><span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h3 id="1-2-appendFile函数的基本用法"><a href="#1-2-appendFile函数的基本用法" class="headerlink" title="1.2 appendFile函数的基本用法"></a>1.2 appendFile函数的基本用法</h3><h5 id="appendFile函数-fs-appendFile-文件名，数据，编码，回调函数（err-）"><a href="#appendFile函数-fs-appendFile-文件名，数据，编码，回调函数（err-）" class="headerlink" title="appendFile函数  fs.appendFile(文件名，数据，编码，回调函数（err)）"></a>appendFile函数  fs.appendFile(文件名，数据，编码，回调函数（err)）</h5><ul>
-<li>writeFile函数虽然可以写入文件，但是如果文件已经存在，我们只想添加一部分内容，他就不能满足了</li>
-<li>appendFile函数可以将新的内容追加到已有的文件中</li>
-<li>如果文件不存在，则会创建一个新的文件</li>
-<li>编码格式默认为“utf8”</li>
+<h5 id="parse函数—-解析主机"><a href="#parse函数—-解析主机" class="headerlink" title="parse函数—-解析主机"></a>parse函数—-解析主机</h5><ul>
+<li>parse函数的第三个参数也是布尔类型的</li>
+<li>当参数为true，解析时会将url的”//“和第一个”/“之间的部分解析为主机名</li>
 </ul>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> fs<span class="token operator">=</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"fs"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-fs<span class="token punctuation">.</span><span class="token function">appendFile</span><span class="token punctuation">(</span><span class="token string">"text.txt"</span><span class="token punctuation">,</span><span class="token string">"data to append"</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err<span class="token punctuation">;</span>
-    
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'The "data to append" was appended to file!'</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> url <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+url<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">'http://www.baidu.com/news'</span><span class="token punctuation">,</span><span class="token boolean">false</span><span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h3 id="1-3-exists函数的基本用法"><a href="#1-3-exists函数的基本用法" class="headerlink" title="1.3 exists函数的基本用法"></a>1.3 exists函数的基本用法</h3><h5 id="fs-exists-文件，回调函数（exists-）"><a href="#fs-exists-文件，回调函数（exists-）" class="headerlink" title="fs.exists(文件，回调函数（exists)）"></a>fs.exists(文件，回调函数（exists)）</h5><ul>
-<li>exists的回调函数只有一个参数，类型为布尔值</li>
-<li>通过它表示文件是否存在</li>
+<p><strong>较之前面的示例，host的内容不再是null了。</strong></p>
+<h4 id="1-2-format函数的基础用法"><a href="#1-2-format函数的基础用法" class="headerlink" title="1.2 format函数的基础用法"></a>1.2 format函数的基础用法</h4><ul>
+<li>format函数的作用与parse相反</li>
+<li>它的参数是一个JSON对象</li>
+<li>返回一个组装好的url地址</li>
 </ul>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> fs<span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"fs"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
- 
-fs<span class="token punctuation">.</span><span class="token function">exists</span><span class="token punctuation">(</span><span class="token string">'/etc/passwd'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">exists</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>exists <span class="token operator">?</span> <span class="token string">"存在"</span> <span class="token operator">:</span> <span class="token string">"不存在!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>请看如下示例：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> url <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+url<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+protocol<span class="token operator">:</span> <span class="token string">'http:'</span><span class="token punctuation">,</span>
+hostname<span class="token operator">:</span><span class="token string">'www.baidu.com'</span><span class="token punctuation">,</span>
+port<span class="token operator">:</span><span class="token string">'80'</span><span class="token punctuation">,</span>
+pathname <span class="token operator">:</span><span class="token string">'/news'</span><span class="token punctuation">,</span>
+query<span class="token operator">:</span><span class="token punctuation">&#123;</span>page<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="1-4-rename函数的基本用法"><a href="#1-4-rename函数的基本用法" class="headerlink" title="1.4 rename函数的基本用法"></a>1.4 rename函数的基本用法</h3><ul>
-<li>修改文件名称</li>
-<li>rename函数提供修改名称服务</li>
+<p><strong>参数JSON对象的字段跟parse函数解析后返回的JSON字段一一对应。</strong></p>
+<h4 id="1-3-resolve函数的基础用法"><a href="#1-3-resolve函数的基础用法" class="headerlink" title="1.3 resolve函数的基础用法"></a>1.3 resolve函数的基础用法</h4><ul>
+<li>resolve函数的参数是两个路径</li>
+<li>第一个路径是开始的路径或者说当前路径</li>
+<li>第二个则是想要去往的路径</li>
+<li>返回值是一个组装好的url</li>
 </ul>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> fs<span class="token operator">=</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"fs"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-fs<span class="token punctuation">.</span><span class="token function">rename</span><span class="token punctuation">(</span><span class="token function">旧文件，新文件，回调函数</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-<span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err<span class="token punctuation">;</span>
-
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"successful modeification"</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li>移动文件</li>
-<li>通过rename函数来达到移动文件的目的</li>
-</ul>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
- 
-fs<span class="token punctuation">.</span><span class="token function">rename</span><span class="token punctuation">(</span>oldPath<span class="token punctuation">,</span>newPath<span class="token punctuation">,</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-   <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err<span class="token punctuation">;</span>
-   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'renamed complete'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="1-5-readFile函数的基本用法"><a href="#1-5-readFile函数的基本用法" class="headerlink" title="1.5 readFile函数的基本用法"></a>1.5 readFile函数的基本用法</h3><h5 id="fs-readFile-文件，编码，回调函数-；"><a href="#fs-readFile-文件，编码，回调函数-；" class="headerlink" title="fs.readFile(文件，编码，回调函数)；"></a>fs.readFile(文件，编码，回调函数)；</h5><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
- 
-fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span>文件名<span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err<span class="token punctuation">;</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>回调函数里面的data就是读取的文件内容</strong></p>
-<h3 id="1-6-unlink函数的基本用法"><a href="#1-6-unlink函数的基本用法" class="headerlink" title="1.6 unlink函数的基本用法"></a>1.6 unlink函数的基本用法</h3><h5 id="fs-unlink-文件，回调函数（err-）"><a href="#fs-unlink-文件，回调函数（err-）" class="headerlink" title="fs.unlink(文件，回调函数（err)）"></a>fs.unlink(文件，回调函数（err)）</h5><ul>
-<li><p>删除想删除的文件</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
- 
-fs<span class="token punctuation">.</span><span class="token function">unlink</span><span class="token punctuation">(</span>文件<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err<span class="token punctuation">;</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'successfully deleted'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="目录的操作"><a href="#目录的操作" class="headerlink" title="目录的操作"></a>目录的操作</h2><h3 id="2-1-mkdir函数的基本用法"><a href="#2-1-mkdir函数的基本用法" class="headerlink" title="2.1 mkdir函数的基本用法"></a>2.1 mkdir函数的基本用法</h3><h5 id="fs-mkdir-路径，权限，回调函数（err-）"><a href="#fs-mkdir-路径，权限，回调函数（err-）" class="headerlink" title="fs.mkdir(路径，权限，回调函数（err)）"></a>fs.mkdir(路径，权限，回调函数（err)）</h5></li>
-<li><p>创建目录</p>
-</li>
-<li><p>参数</p>
-<ul>
-<li>路径：新创建的目录。</li>
-<li>权限：可选参数，只在linux下有效，表示目录的权限，默认为0777，表示文件所有者、文件所有者所在的组的<em>用户、</em>所有用户，都有权限进行读、写、执行的操作。</li>
-<li>回调函数：当发生错误时，错误信息会传递给回调函数的err参数。</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-2-rmdir函数的基本用法"><a href="#2-2-rmdir函数的基本用法" class="headerlink" title="2.2 rmdir函数的基本用法"></a>2.2 rmdir函数的基本用法</h3><h5 id="fs-rmdir-路径，回调函数（err-）"><a href="#fs-rmdir-路径，回调函数（err-）" class="headerlink" title="fs.rmdir(路径，回调函数（err)）"></a>fs.rmdir(路径，回调函数（err)）</h5><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
- 
-fs<span class="token punctuation">.</span><span class="token function">rmdir</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err<span class="token punctuation">;</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'ok'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="2-3-readdir函数的基本用法"><a href="#2-3-readdir函数的基本用法" class="headerlink" title="2.3 readdir函数的基本用法"></a>2.3 readdir函数的基本用法</h3><ul>
-<li>读取目录下所有文件</li>
-<li>readdir函数可以读取到指定目录下所有的文件</li>
-</ul>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
- 
-fs<span class="token punctuation">.</span><span class="token function">readdir</span><span class="token punctuation">(</span>目录<span class="token punctuation">,</span><span class="token function">回调函数</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>files<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>回调函数 (callback) 接受两个参数 (err, files) 其中 files 是一个存储目录中所包含的文件名称的数组，数组中不包括 ‘.’ 和 ‘..’。</strong></p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>fs模块不但提供异步的文件操作，还提供相应的同步操作方法，需要指出的是，nodejs采用异步I/O正是为了避免I/O时的等待时间，提高CPU的利用率，所以在选择使用异步或同步方法的时候需要权衡取舍。</p>
-
+<p>示例如下：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> url <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+url<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'http://example.com/'</span><span class="token punctuation">,</span> <span class="token string">'/one'</span><span class="token punctuation">)</span> 
+<span class="token comment">// 'http://example.com/one'url.resolve('http://example.com/one', '/two') </span>
+<span class="token comment">// 'http://example.com/two'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -626,7 +568,7 @@ fs<span class="token punctuation">.</span><span class="token function">readdir</
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://fuyanz.github.io/2021/04/03/node-%E6%96%87%E4%BB%B6I-O/">https://fuyanz.github.io/2021/04/03/node-%E6%96%87%E4%BB%B6I-O/</a>
+                    <a href="https://fuyanz.github.io/2021/04/03/node%E7%9F%A5%E8%AF%86-url%E5%A4%84%E7%90%86/">https://fuyanz.github.io/2021/04/03/node%E7%9F%A5%E8%AF%86-url%E5%A4%84%E7%90%86/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -839,9 +781,10 @@ fs<span class="token punctuation">.</span><span class="token function">readdir</
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/04/03/node%E7%9F%A5%E8%AF%86-url%E5%A4%84%E7%90%86/">
                     <div class="card-image">
@@ -859,9 +802,67 @@ fs<span class="token punctuation">.</span><span class="token function">readdir</
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-03
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-03
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/node%E7%9F%A5%E8%AF%86/" class="post-category">
+                                    node知识
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/node/">
+                        <span class="chip bg-color">node</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/04/03/node-%E6%96%87%E4%BB%B6I-O/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="node--文件I/O">
+                        
+                        <span class="card-title">node--文件I/O</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            node--文件I/O
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-03
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -887,75 +888,6 @@ fs<span class="token punctuation">.</span><span class="token function">readdir</
                     
                     <a href="/tags/node/">
                         <span class="chip bg-color">node</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/04/02/ajax-demo/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="ajax---demo">
-                        
-                        <span class="card-title">ajax---demo</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            ajax网络请求--promise
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-02
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
-                                </a>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AFJavaScirpt%E7%9F%A5%E8%AF%86/" class="post-category">
-                                    前端JavaScirpt知识
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/ajax/">
-                        <span class="chip bg-color">ajax</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                        <span class="chip bg-color">前端</span>
-                    </a>
-                    
-                    <a href="/tags/JavaScript/">
-                        <span class="chip bg-color">JavaScript</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86/">
-                        <span class="chip bg-color">前端知识</span>
-                    </a>
-                    
-                    <a href="/tags/ES6/">
-                        <span class="chip bg-color">ES6</span>
                     </a>
                     
                 </div>

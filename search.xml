@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>node知识---url处理</title>
+      <link href="2021/04/03/node%E7%9F%A5%E8%AF%86-url%E5%A4%84%E7%90%86/"/>
+      <url>2021/04/03/node%E7%9F%A5%E8%AF%86-url%E5%A4%84%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<h1 id="url处理"><a href="#url处理" class="headerlink" title="url处理"></a>url处理</h1><h3 id="url模块的基本用法"><a href="#url模块的基本用法" class="headerlink" title="url模块的基本用法"></a>url模块的基本用法</h3><p>node.js为互联网而生，和url打交道是无法避免的了，url模块提供一些基础的url处理。</p><h4 id="1-1-parse函数的基础用法"><a href="#1-1-parse函数的基础用法" class="headerlink" title="1.1 parse函数的基础用法"></a>1.1 parse函数的基础用法</h4><ul><li><p>parse函数的作用是解析url</p></li><li><p>返回一个json格式的数组</p><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> url <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>url<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">'http://www.baidu.com'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li></ul><h5 id="parse函数—条件解析"><a href="#parse函数—条件解析" class="headerlink" title="parse函数—条件解析"></a>parse函数—条件解析</h5><ul><li>parse函数的第二个参数是布尔类型</li><li>当参数为true时，会将查询条件也解析成json格式的对象。</li></ul><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> url <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>url<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">'http://www.baidu.com?page=1'</span><span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h5 id="parse函数—-解析主机"><a href="#parse函数—-解析主机" class="headerlink" title="parse函数—-解析主机"></a>parse函数—-解析主机</h5><ul><li>parse函数的第三个参数也是布尔类型的</li><li>当参数为true，解析时会将url的”//“和第一个”/“之间的部分解析为主机名</li></ul><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> url <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>url<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">'http://www.baidu.com/news'</span><span class="token punctuation">,</span><span class="token boolean">false</span><span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>较之前面的示例，host的内容不再是null了。</strong></p><h4 id="1-2-format函数的基础用法"><a href="#1-2-format函数的基础用法" class="headerlink" title="1.2 format函数的基础用法"></a>1.2 format函数的基础用法</h4><ul><li>format函数的作用与parse相反</li><li>它的参数是一个JSON对象</li><li>返回一个组装好的url地址</li></ul><p>请看如下示例：</p><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> url <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>url<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>protocol<span class="token operator">:</span> <span class="token string">'http:'</span><span class="token punctuation">,</span>hostname<span class="token operator">:</span><span class="token string">'www.baidu.com'</span><span class="token punctuation">,</span>port<span class="token operator">:</span><span class="token string">'80'</span><span class="token punctuation">,</span>pathname <span class="token operator">:</span><span class="token string">'/news'</span><span class="token punctuation">,</span>query<span class="token operator">:</span><span class="token punctuation">&#123;</span>page<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>参数JSON对象的字段跟parse函数解析后返回的JSON字段一一对应。</strong></p><h4 id="1-3-resolve函数的基础用法"><a href="#1-3-resolve函数的基础用法" class="headerlink" title="1.3 resolve函数的基础用法"></a>1.3 resolve函数的基础用法</h4><ul><li>resolve函数的参数是两个路径</li><li>第一个路径是开始的路径或者说当前路径</li><li>第二个则是想要去往的路径</li><li>返回值是一个组装好的url</li></ul><p>示例如下：</p><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> url <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>url<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'http://example.com/'</span><span class="token punctuation">,</span> <span class="token string">'/one'</span><span class="token punctuation">)</span> <span class="token comment">// 'http://example.com/one'url.resolve('http://example.com/one', '/two') </span><span class="token comment">// 'http://example.com/two'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+          <category> node知识 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> node </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>node--文件I/O</title>
       <link href="2021/04/03/node-%E6%96%87%E4%BB%B6I-O/"/>
       <url>2021/04/03/node-%E6%96%87%E4%BB%B6I-O/</url>
