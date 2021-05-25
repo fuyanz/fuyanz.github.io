@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="node--url处理">
+    <meta name="keywords" content="知识总结复习一（HTML&amp;CSS）, flyall">
     <meta name="description" content="flyall的博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>node知识---url处理 | flyall</title>
+    <title>知识总结复习一（HTML&amp;CSS） | flyall</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">node知识---url处理</h1>
+                    <h1 class="description center-align post-title">知识总结复习一（HTML&amp;CSS）</h1>
                 </div>
             </div>
         </div>
@@ -429,33 +429,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                                <span class="chip bg-color">前端</span>
-                            </a>
-                        
-                            <a href="/tags/node/">
-                                <span class="chip bg-color">node</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                前端
-                            </a>
-                        
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/node%E7%9F%A5%E8%AF%86/" class="post-category">
-                                node知识
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -464,14 +443,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-03
+                    2021-04-17
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-03
+                    2021-04-17
                 </div>
                 
 
@@ -493,56 +472,103 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="url处理"><a href="#url处理" class="headerlink" title="url处理"></a>url处理</h1><h3 id="url模块的基本用法"><a href="#url模块的基本用法" class="headerlink" title="url模块的基本用法"></a>url模块的基本用法</h3><p>node.js为互联网而生，和url打交道是无法避免的了，url模块提供一些基础的url处理。</p>
-<h4 id="1-1-parse函数的基础用法"><a href="#1-1-parse函数的基础用法" class="headerlink" title="1.1 parse函数的基础用法"></a>1.1 parse函数的基础用法</h4><ul>
-<li><p>parse函数的作用是解析url</p>
+                <h2 id="基础HTML"><a href="#基础HTML" class="headerlink" title="基础HTML"></a>基础HTML</h2><p>HTML是一种标记语言，使用特殊的语法或标记来向浏览器描述网页的结构。</p>
+<p>HTML元素由开始和结束标签构成，标签之间是文本内容，不同的标签可以让文本内容以标题、段落、列表等形式展现。</p>
+<ol>
+<li><p>h2元素可以代表副标题</p>
 </li>
-<li><p>返回一个json格式的数组</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> url <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-url<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">'http://www.baidu.com'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
-</ul>
-<h5 id="parse函数—条件解析"><a href="#parse函数—条件解析" class="headerlink" title="parse函数—条件解析"></a>parse函数—条件解析</h5><ul>
-<li>parse函数的第二个参数是布尔类型</li>
-<li>当参数为true时，会将查询条件也解析成json格式的对象。</li>
-</ul>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> url <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-url<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">'http://www.baidu.com?page=1'</span><span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<li><p>p元素代表段落</p>
+</li>
+<li><p><strong>用占位符文本填充空白</strong></p>
+<p>Web 开发者通常用 lorem ipsum text 来做占位符。 lorem ipsum text 是从古罗马西塞罗的一段著名经文中随机抽取的。</p>
+<p>Lorem ipsum text 自 16 世纪以来就在排版中被用作占位符，这一习惯也在 Web 开发中得以延续。</p>
+</li>
+<li><p>a标签能够实现网页间的跳转、网页内部的跳转</p>
+</li>
+<li><p>“#”来创建链接占位符</p>
+</li>
+</ol>
+<h2 id="应用视觉设计"><a href="#应用视觉设计" class="headerlink" title="应用视觉设计"></a>应用视觉设计</h2><p>排版、色彩理论、图形、动画、页面布局</p>
+<ol>
+<li><p>使用text-align 属性创建视觉平衡 调整文字对齐方式</p>
+</li>
+<li><p>使用width 属性调整元素的宽度</p>
+</li>
+<li><p>使用height 属性调整元素的高度</p>
+</li>
+<li><p>hr创建水平线</p>
+</li>
+<li><p>box-shadow属性给元素添加阴影</p>
+<p>offset-x</p>
+<p>offset-y</p>
+<p>blur-radius 模糊半径</p>
+<p>spread-radius 阴影扩展半径</p>
+<p>color</p>
+</li>
+<li><p>opacity属性设置元素的透明度</p>
+<p>1 完全不透明</p>
+<p>0.5 半透明</p>
+<p>0 完全透明</p>
+</li>
+<li><p>text-transform属性设置文本大小写</p>
+</li>
+</ol>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><ol>
+<li><p>alt 文本留空</p>
+</li>
+<li><p>标题显示内容层级关系</p>
+</li>
+<li><p>main包裹主题内容</p>
+</li>
+<li><p>article 包裹文章内容</p>
+</li>
+<li><p>header元素使屏幕阅读器更容易导航</p>
+</li>
+<li><p>nav</p>
+</li>
+<li><p>footer</p>
+</li>
+<li><p>label提高表单可访问性</p>
+</li>
+<li><p>fieldset包裹单选按钮</p>
+</li>
+<li><p>datetime标准化时间</p>
+</li>
+</ol>
+<h2 id="响应式设计原则"><a href="#响应式设计原则" class="headerlink" title="响应式设计原则"></a>响应式设计原则</h2><h3 id="创建媒体查询"><a href="#创建媒体查询" class="headerlink" title="创建媒体查询"></a>创建媒体查询</h3><p>据不同的视口大小调整内容的布局。 视口是指浏览器中，用户可见的网页内容。 视口会随访问网站的设备不同而改变。</p>
+<p>下面是一个媒体查询的例子，当设备宽度小于或等于 100px 时返回内容：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">)</span></span> <span class="token punctuation">&#123;</span> <span class="token comment">/* CSS Rules */</span> <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h5 id="parse函数—-解析主机"><a href="#parse函数—-解析主机" class="headerlink" title="parse函数—-解析主机"></a>parse函数—-解析主机</h5><ul>
-<li>parse函数的第三个参数也是布尔类型的</li>
-<li>当参数为true，解析时会将url的”//“和第一个”/“之间的部分解析为主机名</li>
-</ul>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> url <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-url<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">'http://www.baidu.com/news'</span><span class="token punctuation">,</span><span class="token boolean">false</span><span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>以下定义的媒体查询，是当设备高度大于或等于 350px 时返回内容：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-height</span><span class="token punctuation">:</span> 350px<span class="token punctuation">)</span></span> <span class="token punctuation">&#123;</span> <span class="token comment">/* CSS Rules */</span> <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><strong>较之前面的示例，host的内容不再是null了。</strong></p>
-<h4 id="1-2-format函数的基础用法"><a href="#1-2-format函数的基础用法" class="headerlink" title="1.2 format函数的基础用法"></a>1.2 format函数的基础用法</h4><ul>
-<li>format函数的作用与parse相反</li>
-<li>它的参数是一个JSON对象</li>
-<li>返回一个组装好的url地址</li>
-</ul>
-<p>请看如下示例：</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> url <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-url<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
-protocol<span class="token operator">:</span> <span class="token string">'http:'</span><span class="token punctuation">,</span>
-hostname<span class="token operator">:</span><span class="token string">'www.baidu.com'</span><span class="token punctuation">,</span>
-port<span class="token operator">:</span><span class="token string">'80'</span><span class="token punctuation">,</span>
-pathname <span class="token operator">:</span><span class="token string">'/news'</span><span class="token punctuation">,</span>
-query<span class="token operator">:</span><span class="token punctuation">&#123;</span>page<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>注意，只有当媒体类型与所使用的设备的类型匹配时，媒体查询中定义的 CSS 才生效。</p>
+<h3 id="使图片自适应设备尺寸"><a href="#使图片自适应设备尺寸" class="headerlink" title="使图片自适应设备尺寸"></a><strong>使图片自适应设备尺寸</strong></h3><p>用 CSS 来让图片自适应其实很简单。 你只需要给图片添加这些属性:</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">img</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">max-width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><strong>参数JSON对象的字段跟parse函数解析后返回的JSON字段一一对应。</strong></p>
-<h4 id="1-3-resolve函数的基础用法"><a href="#1-3-resolve函数的基础用法" class="headerlink" title="1.3 resolve函数的基础用法"></a>1.3 resolve函数的基础用法</h4><ul>
-<li>resolve函数的参数是两个路径</li>
-<li>第一个路径是开始的路径或者说当前路径</li>
-<li>第二个则是想要去往的路径</li>
-<li>返回值是一个组装好的url</li>
+<p>设置 <code>max-width</code> 值为 <code>100%</code> 可确保图片不超出父容器的范围；设置 <code>height</code> 属性为 <code>auto</code> 可以保持图片的原始宽高比。</p>
+<h3 id="针对高分辨率屏幕应使用视网膜图片"><a href="#针对高分辨率屏幕应使用视网膜图片" class="headerlink" title="针对高分辨率屏幕应使用视网膜图片"></a><strong>针对高分辨率屏幕应使用视网膜图片</strong></h3><p>随着联网设备的增加，设备间的区别不仅发生在尺寸和规格上，还发生在用于显示的设备上。 像素密度就是区分不同显示设备的一个指标，它一般会以 PPI（Pixel Per Inch，即每英寸像素）或 DPI（每英寸点数）为计量单位。 最著名的显示器就是 Apple MacBook Pro 笔记本电脑上的“视网膜显示屏”（现亦用于 iMac）。 由于“视网膜显示屏”和“非视网膜显示屏”显示器之间像素密度的不同，某些未考虑高分辨率显示器的图像在高分辨率显示器上渲染时，可能因出现“像素化”而不够清晰。</p>
+<p>让图像正确出现在高分辨率显示器（例如 MacBook Pros “Revistina display”）上的最简单方式， 是定义它们的 <code>width</code> 和 <code>height</code> 值为原始值的一半。 下面是一个仅使用原始高度和宽度一半的图像示例：</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">img</span> <span class="token punctuation">&#123;</span> <span class="token property">height</span><span class="token punctuation">:</span> 250px<span class="token punctuation">;</span> <span class="token property">width</span><span class="token punctuation">:</span> 250px<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>coolPic500x500<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A most excellent picture<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="使排版根据设备尺寸自如响应"><a href="#使排版根据设备尺寸自如响应" class="headerlink" title="使排版根据设备尺寸自如响应"></a><strong>使排版根据设备尺寸自如响应</strong></h3><p>除了使用 <code>em</code> 或 <code>px</code> 设置文本大小，你还可以用视窗单位来做响应式排版。 视窗单位和百分比都是相对单位，但它们是基于不同的参照物。 视窗单位是相对于设备的视窗尺寸（宽度或高度），百分比是相对于父级元素的大小。</p>
+<p>四个不同的视窗单位分别是：</p>
+<ul>
+<li><code>vw</code>：如 <code>10vw</code> 的意思是视窗宽度的 10%。</li>
+<li><code>vh：</code> 如 <code>3vh</code> 的意思是视窗高度的 3%。</li>
+<li><code>vmin：</code> 如 <code>70vmin</code> 的意思是视窗的高度和宽度中较小一个的 70%。</li>
+<li><code>vmax：</code> 如 <code>100vmax</code> 的意思是视窗的高度和宽度中较大一个的 100%。</li>
 </ul>
-<p>示例如下：</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> url <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-url<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'http://example.com/'</span><span class="token punctuation">,</span> <span class="token string">'/one'</span><span class="token punctuation">)</span> 
-<span class="token comment">// 'http://example.com/one'url.resolve('http://example.com/one', '/two') </span>
-<span class="token comment">// 'http://example.com/two'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>下面这个例子是设置 <code>body</code> 标签的宽度为视窗宽度的 30%。</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">body</span> <span class="token punctuation">&#123;</span> <span class="token property">width</span><span class="token punctuation">:</span> 30vw<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
                 
             </div>
             <hr/>
@@ -568,7 +594,7 @@ url<span class="token punctuation">.</span><span class="token function">resolve<
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://fuyanz.github.io/2021/04/03/node%E7%9F%A5%E8%AF%86-url%E5%A4%84%E7%90%86/">https://fuyanz.github.io/2021/04/03/node%E7%9F%A5%E8%AF%86-url%E5%A4%84%E7%90%86/</a>
+                    <a href="https://fuyanz.github.io/%E8%8D%89%E7%A8%BF/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%E4%B8%80%EF%BC%88HTML%EF%BC%89.html">https://fuyanz.github.io/%E8%8D%89%E7%A8%BF/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%E4%B8%80%EF%BC%88HTML%EF%BC%89.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -605,15 +631,7 @@ url<span class="token punctuation">.</span><span class="token function">resolve<
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                                    <span class="chip bg-color">前端</span>
-                                </a>
-                            
-                                <a href="/tags/node/">
-                                    <span class="chip bg-color">node</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -781,57 +799,39 @@ url<span class="token punctuation">.</span><span class="token function">resolve<
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/05/25/%E6%A0%87%E7%AD%BE/">
+                <a href="/%E8%8D%89%E7%A8%BF/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%E4%B8%80%EF%BC%88HTML%EF%BC%89.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="标签">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="知识总结复习一（HTML&amp;CSS）">
                         
-                        <span class="card-title">标签</span>
+                        <span class="card-title">知识总结复习一（HTML&amp;CSS）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            HTML标签
+                            
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-17
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="post-category">
-                                    基础知识
-                                </a>
-                            
-                            <a href="/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="post-category">
-                                    前端基础知识
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            flyall
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
-                        <span class="chip bg-color">基础知识</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
-                        <span class="chip bg-color">前端基础知识</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -839,56 +839,37 @@ url<span class="token punctuation">.</span><span class="token function">resolve<
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/03/node-%E6%96%87%E4%BB%B6I-O/">
+                <a href="/%E8%8D%89%E7%A8%BF/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%E4%B8%80%EF%BC%88HTML%EF%BC%89.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="node--文件I/O">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="知识总结复习一（HTML&amp;CSS）">
                         
-                        <span class="card-title">node--文件I/O</span>
+                        <span class="card-title">知识总结复习一（HTML&amp;CSS）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            node--文件I/O
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-17
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
-                                </a>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/node%E7%9F%A5%E8%AF%86/" class="post-category">
-                                    node知识
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            flyall
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                        <span class="chip bg-color">前端</span>
-                    </a>
-                    
-                    <a href="/tags/node/">
-                        <span class="chip bg-color">node</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>

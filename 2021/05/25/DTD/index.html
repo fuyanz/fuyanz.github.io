@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="node--url处理">
+    <meta name="keywords" content="文档类型定义（DTD）">
     <meta name="description" content="flyall的博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>node知识---url处理 | flyall</title>
+    <title>文档类型定义（DTD） | flyall</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">node知识---url处理</h1>
+                    <h1 class="description center-align post-title">文档类型定义（DTD）</h1>
                 </div>
             </div>
         </div>
@@ -431,12 +431,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                                <span class="chip bg-color">前端</span>
+                            <a href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+                                <span class="chip bg-color">基础知识</span>
                             </a>
                         
-                            <a href="/tags/node/">
-                                <span class="chip bg-color">node</span>
+                            <a href="/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+                                <span class="chip bg-color">前端基础知识</span>
                             </a>
                         
                     </div>
@@ -447,12 +447,12 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                前端
+                            <a href="/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="post-category">
+                                基础知识
                             </a>
                         
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/node%E7%9F%A5%E8%AF%86/" class="post-category">
-                                node知识
+                            <a href="/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="post-category">
+                                前端基础知识
                             </a>
                         
                     </div>
@@ -464,14 +464,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-03
+                    2021-05-25
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-03
+                    2021-05-25
                 </div>
                 
 
@@ -493,56 +493,34 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="url处理"><a href="#url处理" class="headerlink" title="url处理"></a>url处理</h1><h3 id="url模块的基本用法"><a href="#url模块的基本用法" class="headerlink" title="url模块的基本用法"></a>url模块的基本用法</h3><p>node.js为互联网而生，和url打交道是无法避免的了，url模块提供一些基础的url处理。</p>
-<h4 id="1-1-parse函数的基础用法"><a href="#1-1-parse函数的基础用法" class="headerlink" title="1.1 parse函数的基础用法"></a>1.1 parse函数的基础用法</h4><ul>
-<li><p>parse函数的作用是解析url</p>
+                <h1 id="DTD"><a href="#DTD" class="headerlink" title="DTD"></a>DTD</h1><p>DocType Definition：文档类型定义（DTD），用来定义文档的规范。可以内部声明和外部声明。</p>
+<ul>
+<li>内部&lt;！DOCTYPE根元素[元素声明]&gt;</li>
+<li>外部&lt;! ！DOCTYPE根元素 类型 文件名&gt;</li>
+</ul>
+<p>作用：规范了html使用的是哪个版本的HTML书写规范</p>
+<h2 id="DTD版本"><a href="#DTD版本" class="headerlink" title="DTD版本"></a>DTD版本</h2><p>html4.01版本，结构和样式做了分离</p>
+<p>Xhtml1.0版本，规范做了扩展升级</p>
+<ul>
+<li>​    代码必须用小写字母，属性必须用双引号包裹，结束标签必须写关闭符号等</li>
+</ul>
+<p>这两个规范分别包含了三个小规范：</p>
+<ul>
+<li>Strict<ul>
+<li>严格版：不能使用废弃标签，font/b/u/i/,不能使用框架集（framesets）</li>
+</ul>
 </li>
-<li><p>返回一个json格式的数组</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> url <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-url<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">'http://www.baidu.com'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li>Transitional<ul>
+<li>过渡版：通用版。可以使用废弃标签，不能使用框架集</li>
 </ul>
-<h5 id="parse函数—条件解析"><a href="#parse函数—条件解析" class="headerlink" title="parse函数—条件解析"></a>parse函数—条件解析</h5><ul>
-<li>parse函数的第二个参数是布尔类型</li>
-<li>当参数为true时，会将查询条件也解析成json格式的对象。</li>
+</li>
+<li>Frameset<ul>
+<li>框架集版：能使用框架集</li>
 </ul>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> url <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-url<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">'http://www.baidu.com?page=1'</span><span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<p>html5不基于SGML规范，不再区分3个小规范，所以不需要在引用DTD</p>
 
-<h5 id="parse函数—-解析主机"><a href="#parse函数—-解析主机" class="headerlink" title="parse函数—-解析主机"></a>parse函数—-解析主机</h5><ul>
-<li>parse函数的第三个参数也是布尔类型的</li>
-<li>当参数为true，解析时会将url的”//“和第一个”/“之间的部分解析为主机名</li>
-</ul>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> url <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-url<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">'http://www.baidu.com/news'</span><span class="token punctuation">,</span><span class="token boolean">false</span><span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p><strong>较之前面的示例，host的内容不再是null了。</strong></p>
-<h4 id="1-2-format函数的基础用法"><a href="#1-2-format函数的基础用法" class="headerlink" title="1.2 format函数的基础用法"></a>1.2 format函数的基础用法</h4><ul>
-<li>format函数的作用与parse相反</li>
-<li>它的参数是一个JSON对象</li>
-<li>返回一个组装好的url地址</li>
-</ul>
-<p>请看如下示例：</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> url <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-url<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
-protocol<span class="token operator">:</span> <span class="token string">'http:'</span><span class="token punctuation">,</span>
-hostname<span class="token operator">:</span><span class="token string">'www.baidu.com'</span><span class="token punctuation">,</span>
-port<span class="token operator">:</span><span class="token string">'80'</span><span class="token punctuation">,</span>
-pathname <span class="token operator">:</span><span class="token string">'/news'</span><span class="token punctuation">,</span>
-query<span class="token operator">:</span><span class="token punctuation">&#123;</span>page<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>参数JSON对象的字段跟parse函数解析后返回的JSON字段一一对应。</strong></p>
-<h4 id="1-3-resolve函数的基础用法"><a href="#1-3-resolve函数的基础用法" class="headerlink" title="1.3 resolve函数的基础用法"></a>1.3 resolve函数的基础用法</h4><ul>
-<li>resolve函数的参数是两个路径</li>
-<li>第一个路径是开始的路径或者说当前路径</li>
-<li>第二个则是想要去往的路径</li>
-<li>返回值是一个组装好的url</li>
-</ul>
-<p>示例如下：</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> url <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-url<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'http://example.com/'</span><span class="token punctuation">,</span> <span class="token string">'/one'</span><span class="token punctuation">)</span> 
-<span class="token comment">// 'http://example.com/one'url.resolve('http://example.com/one', '/two') </span>
-<span class="token comment">// 'http://example.com/two'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -568,7 +546,7 @@ url<span class="token punctuation">.</span><span class="token function">resolve<
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://fuyanz.github.io/2021/04/03/node%E7%9F%A5%E8%AF%86-url%E5%A4%84%E7%90%86/">https://fuyanz.github.io/2021/04/03/node%E7%9F%A5%E8%AF%86-url%E5%A4%84%E7%90%86/</a>
+                    <a href="https://fuyanz.github.io/2021/05/25/DTD/">https://fuyanz.github.io/2021/05/25/DTD/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -606,12 +584,12 @@ url<span class="token punctuation">.</span><span class="token function">resolve<
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                                    <span class="chip bg-color">前端</span>
+                                <a href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+                                    <span class="chip bg-color">基础知识</span>
                                 </a>
                             
-                                <a href="/tags/node/">
-                                    <span class="chip bg-color">node</span>
+                                <a href="/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+                                    <span class="chip bg-color">前端基础知识</span>
                                 </a>
                             
                         </div>
@@ -785,19 +763,19 @@ url<span class="token punctuation">.</span><span class="token function">resolve<
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/05/25/%E6%A0%87%E7%AD%BE/">
+                <a href="/2021/05/25/css/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="标签">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="css基础知识">
                         
-                        <span class="card-title">标签</span>
+                        <span class="card-title">css基础知识</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            HTML标签
+                            css基础知识
                         
                     </div>
                     <div class="publish-info">
@@ -842,35 +820,35 @@ url<span class="token punctuation">.</span><span class="token function">resolve<
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/03/node-%E6%96%87%E4%BB%B6I-O/">
+                <a href="/2021/05/25/html%E4%B8%8E%E7%BA%AF%E6%96%87%E6%9C%AC/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="node--文件I/O">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="html与纯文本">
                         
-                        <span class="card-title">node--文件I/O</span>
+                        <span class="card-title">html与纯文本</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            node--文件I/O
+                            html与纯文本
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-25
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
+                            <a href="/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="post-category">
+                                    基础知识
                                 </a>
                             
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/node%E7%9F%A5%E8%AF%86/" class="post-category">
-                                    node知识
+                            <a href="/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="post-category">
+                                    前端基础知识
                                 </a>
                             
                             
@@ -880,12 +858,12 @@ url<span class="token punctuation">.</span><span class="token function">resolve<
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                        <span class="chip bg-color">前端</span>
+                    <a href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+                        <span class="chip bg-color">基础知识</span>
                     </a>
                     
-                    <a href="/tags/node/">
-                        <span class="chip bg-color">node</span>
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+                        <span class="chip bg-color">前端基础知识</span>
                     </a>
                     
                 </div>
