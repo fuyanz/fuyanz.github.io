@@ -149,13 +149,29 @@
     
     
     <entry>
-      <title></title>
+      <title>浏览器与服务器</title>
       <link href="2021/05/25/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
       <url>2021/05/25/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
       
-        <content type="html"><![CDATA[<p>​—<br>title: 浏览器与服务器<br>date: 2021-05-25 16:04:30<br>summary: 浏览器与服务器<br>keywords:<br>    - 浏览器与服务器<br>categories:<br>    - 基础知识<br>    - 前端基础知识<br>tags:<br>    - 基础知识<br>    - 前端基础知识<br>​—</p><h1 id="浏览器与服务器"><a href="#浏览器与服务器" class="headerlink" title="浏览器与服务器"></a>浏览器与服务器</h1><h2 id="服务器（server）"><a href="#服务器（server）" class="headerlink" title="服务器（server）"></a>服务器（server）</h2><p>作用：存放我们的数据</p><p>服务器必须24小时在线，掉线了数据就访问不到，就不能正常访问网页</p><p>可以通过个人计算机里面的一些软件，来远程控制服务器</p><h2 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h2><p>作用: HTTP 请求的发起，接收，都是由浏览器来完成的。浏览器有很多厂商提供</p><h3 id="全球五大浏览器"><a href="#全球五大浏览器" class="headerlink" title="全球五大浏览器"></a>全球五大浏览器</h3><ul><li>IE（Internet Explorer）<ul><li>内核：Trident  （IE Edge的内核为斯巴达）</li></ul></li><li>火狐（firefox）<ul><li>内核：gecko</li></ul></li><li>苹果（safari）<ul><li>内核：webkit</li></ul></li><li>谷歌（Chrome）<ul><li>内核：Blink</li></ul></li><li>欧朋(opera)<ul><li>内核：google blink</li></ul></li></ul><p>浏览器内核具有差异性，显示原生html有差异：</p><p>​    从服务器接收的数据会存放在一个临时的文件夹。接收我们缓存的数据（chrome://version/)</p><p>临时文件夹的作用：第二次访问同一个网站速度会变快，因为第一次访问的时候，大部分文件已经缓存在了本地</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="浏览器与服务器"><a href="#浏览器与服务器" class="headerlink" title="浏览器与服务器"></a>浏览器与服务器</h1><h2 id="服务器（server）"><a href="#服务器（server）" class="headerlink" title="服务器（server）"></a>服务器（server）</h2><p>作用：存放我们的数据</p><p>服务器必须24小时在线，掉线了数据就访问不到，就不能正常访问网页</p><p>可以通过个人计算机里面的一些软件，来远程控制服务器</p><h2 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h2><p>作用: HTTP 请求的发起，接收，都是由浏览器来完成的。浏览器有很多厂商提供</p><h3 id="全球五大浏览器"><a href="#全球五大浏览器" class="headerlink" title="全球五大浏览器"></a>全球五大浏览器</h3><ul><li>IE（Internet Explorer）<ul><li>内核：Trident  （IE Edge的内核为斯巴达）</li></ul></li><li>火狐（firefox）<ul><li>内核：gecko</li></ul></li><li>苹果（safari）<ul><li>内核：webkit</li></ul></li><li>谷歌（Chrome）<ul><li>内核：Blink</li></ul></li><li>欧朋(opera)<ul><li>内核：google blink</li></ul></li></ul><p>浏览器内核具有差异性，显示原生html有差异：</p><p>​    从服务器接收的数据会存放在一个临时的文件夹。接收我们缓存的数据（chrome://version/)</p><p>临时文件夹的作用：第二次访问同一个网站速度会变快，因为第一次访问的时候，大部分文件已经缓存在了本地</p>]]></content>
       
       
+      <categories>
+          
+          <category> 基础知识 </category>
+          
+          <category> 前端基础知识 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 基础知识 </tag>
+            
+            <tag> 前端基础知识 </tag>
+            
+        </tags>
       
     </entry>
     
