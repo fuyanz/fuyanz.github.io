@@ -516,20 +516,28 @@
 <p>绝大多数的的文档头部包含的数据都不会真正作为内容显示给读者</p>
 <p>这些标签可以用在head部分：</p>
 <base><link><script><style><title><base><link><script><style><title>
-- base标签
-  - 为页面上的所有链接规定默认的地址或者目标
-  - herf：规定页面中所有相对链接的基准url
-  - target：在何处打开页面中的链接（_blank,_parents，_self,_top,_framename) 
-- title标签内部放的是网页的名字
-  - 里面的内容可以帮我们提高搜索引擎优化（SEO）
-- link 定义文档与外部资源关系
-- style 定义内嵌样式
-- script 引入外部脚本 或定义内嵌脚本
-- meta 提供页面相关的元信息（meta-information），标签位于文档的头部，不包含任何内容
-  - content 定义与http-equiv或name属性相关的原信息
-  - http-equiv 把content属性关联到HTTP头部（content-type，expires，refresh，set-cookie）
-  - name 把content属性关联到一个名称（author，description，keywords（SEO优化等）
 
+<ul>
+<li>base标签<ul>
+<li>为页面上的所有链接规定默认的地址或者目标</li>
+<li>herf：规定页面中所有相对链接的基准url</li>
+<li>target：在何处打开页面中的链接（_blank,_parents，_self,_top,_framename) </li>
+</ul>
+</li>
+<li>title标签内部放的是网页的名字<ul>
+<li>里面的内容可以帮我们提高搜索引擎优化（SEO）</li>
+</ul>
+</li>
+<li>link 定义文档与外部资源关系</li>
+<li>style 定义内嵌样式</li>
+<li>script 引入外部脚本 或定义内嵌脚本</li>
+<li>meta 提供页面相关的元信息（meta-information），标签位于文档的头部，不包含任何内容<ul>
+<li>content 定义与http-equiv或name属性相关的原信息</li>
+<li>http-equiv 把content属性关联到HTTP头部（content-type，expires，refresh，set-cookie）</li>
+<li>name 把content属性关联到一个名称（author，description，keywords（SEO优化等）</li>
+</ul>
+</li>
+</ul>
 <h2 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h2><p>定义了当前文件使用的字库</p>
 <p>中文字库：utf-8：国际标准字库 一个汉字3个字节</p>
 <p>GBK/gb2312：中国字库，国家标准。一个汉字2个字节。</p>
@@ -636,7 +644,6 @@
 <h2 id="div和span标签"><a href="#div和span标签" class="headerlink" title="div和span标签"></a>div和span标签</h2><h3 id="div："><a href="#div：" class="headerlink" title="div："></a>div：</h3><p>容器级标签（division）用来划分独立的逻辑块</p>
 <p>是一个容器（大的区域），本身在网页中没有任何默认样式，可以放置任何标签和内容</p>
 <p>里面可以存放一些相近，相同功能的标签，div会把页面分割成一个小的区域</p>
-<hr>
 <h3 id="span："><a href="#span：" class="headerlink" title="span："></a>span：</h3><p>文本级的标签，只能放文字图片表单元素等，用来修饰文本的效果（小的跨度范围）</p>
 <p>**div作为容器，如果没有内容撑起，或者不设置宽高，是没有默认效果的 **</p>
 <p>span标签需要配合css使用</p>
@@ -681,8 +688,7 @@
 <p>三层嵌套关系：table&gt;tr&gt;th|td</p>
 <p>最简单的表格要求每一行的单元格个数相同</p>
 <p>如果表格有表头的概念：需要将td标签变成th</p>
-<h3 id="table标签"><a href="#table标签" class="headerlink" title="table标签"></a>table标签</h3><hr>
-<p>属性：border 设置表格的边框</p>
+<h3 id="table标签"><a href="#table标签" class="headerlink" title="table标签"></a>table标签</h3><p>属性：border 设置表格的边框</p>
 <p>border color 设置边框的颜色</p>
 <p>height width：设置表格的宽高</p>
 <p>align：设置表格的整体对齐方式</p>
@@ -691,8 +697,7 @@
 <p>background：设置表格的背景图片</p>
 <p>bgcolor：设置表格的背景颜色</p>
 <p>summary:表格隐藏信息，用来提高SEO</p>
-<h3 id="tr-td-th"><a href="#tr-td-th" class="headerlink" title="tr,td,th"></a>tr,td,th</h3><hr>
-<p>tr：行语义，一对table标签中有几对tr，就代表这个表格有多少行，属性如下：</p>
+<h3 id="tr-td-th"><a href="#tr-td-th" class="headerlink" title="tr,td,th"></a>tr,td,th</h3><p>tr：行语义，一对table标签中有几对tr，就代表这个表格有多少行，属性如下：</p>
 <p>​        align    设置的当前单元格中文本的水平对齐方式</p>
 <p>bgcolor，background </p>
 <p>colspan    列合并，左右合并</p>
@@ -721,8 +726,7 @@
 <p>​    method:    设置数据提交的方式</p>
 <p>​    target：    页面打开方式</p>
 <p>表单中的控件：textarea  文本域      select   下拉列表          input     输入框        button    按钮</p>
-<h4 id="textarea与label标签"><a href="#textarea与label标签" class="headerlink" title="textarea与label标签"></a>textarea与label标签</h4><hr>
-<p>textarea 多行文本域，多行文本输入框</p>
+<h4 id="textarea与label标签"><a href="#textarea与label标签" class="headerlink" title="textarea与label标签"></a>textarea与label标签</h4><p>textarea 多行文本域，多行文本输入框</p>
 <p>属性:</p>
 <p>​    rows    设置行高，属性值是数字</p>
 <p>​    cols    设置列宽，属性值是数字   数字是字节</p>
@@ -736,8 +740,7 @@
 <p><strong>表单：action：提交数据的地址</strong></p>
 <p>​        <strong>method：提交数据的方式</strong></p>
 <p>​        <strong>target：在哪里查看结果</strong></p>
-<h4 id="select标签"><a href="#select标签" class="headerlink" title="select标签"></a>select标签</h4><hr>
-<p>select 标签可以创建单选或多选菜单，属性：</p>
+<h4 id="select标签"><a href="#select标签" class="headerlink" title="select标签"></a>select标签</h4><p>select 标签可以创建单选或多选菜单，属性：</p>
 <p>​    multiple    设置多选</p>
 <p>​    size            设置显示在页面上的列表的项数1-7</p>
 <p>​    option        标签用定义下拉列表中的一个选项（一个条目），属性：</p>
@@ -746,8 +749,7 @@
 <p>optgroup        标签定义选项组</p>
 <p>label                 为选项组规定描述</p>
 <p>multiple            多选 复选</p>
-<h4 id="button标签"><a href="#button标签" class="headerlink" title="button标签"></a>button标签</h4><hr>
-<p>button 标签定义一个按钮，属性：</p>
+<h4 id="button标签"><a href="#button标签" class="headerlink" title="button标签"></a>button标签</h4><p>button 标签定义一个按钮，属性：</p>
 <p>​    type    规定按钮的类型（button，reset，submint）</p>
 <p>​    <strong>button控件与input type=“button”相比：</strong></p>
 <p>​            <strong>button标签之间的所有内容都是按钮的内容，比如文本或多媒体内容</strong></p>
@@ -772,23 +774,20 @@
 <p>readonly    规定文本区为只读</p>
 <p>maxlength    规定文本区域的最大字符数（textarea与input）</p>
 <p>required    规定文本区域是必填的（textarea与input）</p>
-<h5 id="input标签的type属性"><a href="#input标签的type属性" class="headerlink" title="input标签的type属性"></a>input标签的type属性</h5><hr>
-<p>image    图像域</p>
+<h5 id="input标签的type属性"><a href="#input标签的type属性" class="headerlink" title="input标签的type属性"></a>input标签的type属性</h5><p>image    图像域</p>
 <p>src    设置图片的路径    width height设置图片的宽高</p>
 <p>file    文件</p>
 <p>hidden    隐藏文件</p>
 <p>button    普通按钮</p>
 <p>submit    提交按钮</p>
 <p>reset    重置按钮</p>
-<h4 id="废弃标签"><a href="#废弃标签" class="headerlink" title="废弃标签"></a>废弃标签</h4><hr>
-<p>font    字体标签</p>
+<h4 id="废弃标签"><a href="#废弃标签" class="headerlink" title="废弃标签"></a>废弃标签</h4><p>font    字体标签</p>
 <p>frame    定义框架</p>
 <p>b    加粗</p>
 <p>i    斜体字</p>
 <p>u    下划线</p>
 <p>s    删除线</p>
-<h4 id="其他标签"><a href="#其他标签" class="headerlink" title="其他标签"></a>其他标签</h4><hr>
-<p>pre    预格式化原样输出</p>
+<h4 id="其他标签"><a href="#其他标签" class="headerlink" title="其他标签"></a>其他标签</h4><p>pre    预格式化原样输出</p>
 <p>code    单行代码</p>
 <p>strong    强调标签，加粗效果</p>
 <p>em    强调标签，斜体字效果</p>
@@ -799,15 +798,13 @@
 <p>iframe    内联框架</p>
 <p>br    换行</p>
 <p>hr    横线</p>
-<h4 id="实体符号"><a href="#实体符号" class="headerlink" title="实体符号"></a>实体符号</h4><hr>
-<p>&amp;nbsp；    空格</p>
+<h4 id="实体符号"><a href="#实体符号" class="headerlink" title="实体符号"></a>实体符号</h4><p>&amp;nbsp；    空格</p>
 <p>&amp;emsp；    全角空格</p>
 <p>&amp;cope；    版权符号</p>
 <p>&amp;yen；    人民币符号</p>
 <p>&amp;gt；    大于</p>
 <p>&amp;lt；    小于</p>
-<h4 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h4><hr>
-<p>标签名必须使用小写字母</p>
+<h4 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h4><p>标签名必须使用小写字母</p>
 <p>属性名必须使用小写字母并用双引号包围属性值</p>
 <p>使用4个空格作为一个缩进层级</p>
 <p>class必须单词字母小写，单词以-分隔</p>
