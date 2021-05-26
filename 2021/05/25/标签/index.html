@@ -514,10 +514,6 @@
 <p>head中的元素可以引用脚本，指示浏览器在哪里找到样式表，提供元信息等。</p>
 <p>文档的头部描述了文档的各种属性和信息，包括文档的标题，在web中的位置以及和其其他文档的关系等</p>
 <p>绝大多数的的文档头部包含的数据都不会真正作为内容显示给读者</p>
-<p>这些标签可以用在head部分：</p>
-<base><link><script><style><title><base><link><script><style><title>
-
-
 <ul>
 <li>base标签<ul>
 <li>为页面上的所有链接规定默认的地址或者目标</li>
@@ -544,7 +540,7 @@
 <p>GBK/gb2312：中国字库，国家标准。一个汉字2个字节。</p>
 <p>分情况适用：网页是外文网站用utf-8，有大量中文，需要网页加载速度快用gbk</p>
 <p><strong>必须保证设置的字符集和软件保存的字符集类型一致</strong></p>
-<h2 id="body标签"><a href="#body标签" class="headerlink" title="body标签"></a>body标签</h2><p>作用：body部分是我们的网页主体，给客户浏览的区域</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="body标签"><a href="#body标签" class="headerlink" title="body标签"></a>body标签</h2><p>作用：body部分是我们的网页主体，给客户浏览的区域</p>
 <p>内容：里面放置的是我们html标签的网页解构</p>
 <h2 id="html基本语法"><a href="#html基本语法" class="headerlink" title="html基本语法"></a>html基本语法</h2><p>标签之间对空格、缩进、换行不敏感，我们的标签嵌套关系敏感</p>
 <p>tab：缩进 shift+tab：撤销缩进</p>
@@ -618,27 +614,28 @@
 <li><p>通过另一个a标签的href属性去链接这个锚点</p>
 <p>可以连接到当前页面的指定位置</p>
 <p>还可以连接到其他页面的指定部分</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;h1&gt;这里很多内容&lt;&#x2F;h1&gt;
-&lt;h1&gt;这里很多内容&lt;&#x2F;h1&gt;
-&lt;h1&gt;这里很多内容&lt;&#x2F;h1&gt;
-&lt;h1&gt;这里很多内容&lt;&#x2F;h1&gt;                              &lt;a href&#x3D;&quot;#top&quot;&gt;返回顶部&lt;&#x2F;a&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>vscode快捷键 :h1{标题}+tab 创建的标签包含{}内部的内容</p>
-<p>​                        h1{}*10+tab 创建十个这样的标题</p>
-<p>​                        h1{$}*10+tab  $代表序号</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;a href&#x3D;&quot;.&#x2F;xxx.html&quot;&gt;&lt;&#x2F;a&gt;
-&lt;a href&#x3D;&quot;.&#x2F;xxx.html#middle&quot;&gt;&lt;&#x2F;a&gt;
-&lt;h1&gt;这里很多内容&lt;&#x2F;h1&gt;
-&lt;p&gt;很多很多很多内容M&lt;&#x2F;p&gt;
-&lt;p id&#x3D;&quot;middle&quot;&gt;很多很多很多内容M&lt;&#x2F;p&gt;
-&lt;p&gt;很多很多很多内容M&lt;&#x2F;p&gt;
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-</li>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>这里很多内容<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>这里很多内容<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>这里很多内容<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>这里很多内容<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>                              
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#top<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>返回顶部<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 </li>
 </ul>
+<p>vscode快捷键 :h1{标题}+tab 创建的标签包含{}内部的内容</p>
+<p>​                        h1{}*10+tab 创建十个这样的标题</p>
+<p>​                        h1{$}*10+tab  $代表序号</p>
+<pre><code> <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./xxx.html<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./xxx.html#middle<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>这里很多内容<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>很多很多很多内容M<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>middle<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>很多很多很多内容M<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>很多很多很多内容M<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+ 
+   
+</code></pre>
 <h2 id="div和span标签"><a href="#div和span标签" class="headerlink" title="div和span标签"></a>div和span标签</h2><h3 id="div："><a href="#div：" class="headerlink" title="div："></a>div：</h3><p>容器级标签（division）用来划分独立的逻辑块</p>
 <p>是一个容器（大的区域），本身在网页中没有任何默认样式，可以放置任何标签和内容</p>
 <p>里面可以存放一些相近，相同功能的标签，div会把页面分割成一个小的区域</p>
@@ -731,7 +728,7 @@
 <p>label    标签为表单控件（textarea，input）定义标注</p>
 <p>for    规定label绑定到哪个表单控件（id）</p>
 <p>​        <strong>我们还可以将表单控件写在label标签内，实现联动</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;label&gt;简介 &lt;textarea&gt;&lt;&#x2F;textarea&gt;&lt;&#x2F;label&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">></span></span>简介 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>textarea</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>textarea</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
@@ -761,7 +758,7 @@
 <p>​    checkbox    复选框，多选框</p>
 <p>​    单选和复选的name值必须一致，这样才能保证是同一个题干下面的不同选项</p>
 <p>checked    设置默认被选中；布尔型属性</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;input type&#x3D;&quot;text&quot;  id&#x3D;&quot;username&quot; pattern&#x3D;&quot;[0-9]&#123;2~6&#125;&quot;&gt;&#x2F;&#x2F;2到5位数字<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span>  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span> <span class="token attr-name">pattern</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[0-9]&#123;2~6&#125;<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>//2到5位数字<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h5 id="表单通用属性"><a href="#表单通用属性" class="headerlink" title="表单通用属性"></a>表单通用属性</h5><p>value    定义送往服务器的选项值（表单控件的值）</p>
 <p>autofocus    规定在页面加载后文本区域自动获得焦点</p>
@@ -833,7 +830,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://fuyanz.github.io/2021/05/25/%E6%A0%87%E7%AD%BE2/">https://fuyanz.github.io/2021/05/25/%E6%A0%87%E7%AD%BE2/</a>
+                    <a href="https://fuyanz.github.io/2021/05/25/%E6%A0%87%E7%AD%BE/">https://fuyanz.github.io/2021/05/25/%E6%A0%87%E7%AD%BE/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1051,7 +1048,7 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2021/05/25/%E6%A0%87%E7%AD%BE2/">
+                <a href="/2021/05/25/%E6%A0%87%E7%AD%BE/">
                     <div class="card-image">
                         
                         
