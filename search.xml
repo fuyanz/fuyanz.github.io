@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>基础知识点</title>
+      <link href="2021/05/28/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+      <url>2021/05/28/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+      
+        <content type="html"><![CDATA[<h1 id="基础知识点"><a href="#基础知识点" class="headerlink" title="基础知识点"></a>基础知识点</h1><h2 id="网页"><a href="#网页" class="headerlink" title="网页"></a>网页</h2><h3 id="什么是网页？"><a href="#什么是网页？" class="headerlink" title="什么是网页？"></a>什么是网页？</h3><p><strong>网站</strong>是指在因特网上根据一定的规则，使用HTML等制作的用于展示特定内容相关的网页集合。</p><p><strong>网页</strong>是网站中的一“页”，通常是 <strong>HTML格式的文件</strong>，它要通过浏览器来阅读。</p><p><strong>网页是构成网站的基本元素，</strong>它通常由图片、链接、文字、声音、视频、等元素构成。通常我们看到的网页，以**.htm<strong>或 <strong>.html</strong>后缀结尾的文件，因此将其俗称为</strong>HTML文件**。</p><p><em>因特网</em>：（internet）</p><p>是一组全球信息资源的总汇。</p><p>因特网的作用：以相互交流信息资源为目的，基于一些共同的协议，并通过许多<a href="https://baike.baidu.com/item/%E8%B7%AF%E7%94%B1%E5%99%A8/108294">路由器</a>和公共互联网而成，它是一个信息资源和资源共享的集合。</p><p><em>后缀</em>：.doc,.docx,.png,.jpg</p><h3 id="什么是HTML"><a href="#什么是HTML" class="headerlink" title="什么是HTML?"></a>什么是HTML?</h3><p><strong>HTML</strong>指的是<strong>超文本标记语言（Hyper Text Markup Language）</strong>，它是用来描述网页的一种语言。</p><p>html不是一种编程语言，而是一种标记语言（markup language）。</p><p>标记语言是一套标记标签（markup tag）。</p><h4 id="超文本"><a href="#超文本" class="headerlink" title="超文本"></a><strong>超文本</strong></h4><p>含义：</p><ol><li>它可以加入图片、声音、动画、多媒体等内容（超越了文本限制)。</li></ol><p>文本文档中只能是文本。</p><ol start="2"><li>可以从一个文件跳转到另一个文件，与世界各地主机的文件连接（超链接文本）。</li></ol><h3 id="网页的形成？"><a href="#网页的形成？" class="headerlink" title="网页的形成？"></a>网页的形成？</h3><h4 id="网页的形成"><a href="#网页的形成" class="headerlink" title="网页的形成"></a>网页的形成</h4><p>网页是由网页元素组成的，这些元素是利用html标签描述出来，然后通过浏览器解析来展示给用户的。</p><p>开发代码（html文件等文件）—–&gt;浏览器显示代码（解析、渲染）———&gt;Web页面（用户眼中各种各样的页面）</p><p>总结：网页是图片、链接、文字、声音、视频等元素组成，其实就是一个html文件（后缀为.html)的文件。</p><p>网页如何生成：前端人员书写HTML文件，浏览器打开文件，就能看到网页了。</p><h3 id="常用浏览器"><a href="#常用浏览器" class="headerlink" title="常用浏览器"></a>常用浏览器</h3><h4 id="常用的浏览器"><a href="#常用的浏览器" class="headerlink" title="常用的浏览器"></a>常用的浏览器</h4><p>浏览器是网页显示、运行的平台。</p><p>常用的五大浏览器：</p><ol><li>IE   Edge</li><li>火狐（Firefox）</li><li>谷歌（Chrome）</li><li>Safari</li><li>Opera</li></ol><h4 id="浏览器内核"><a href="#浏览器内核" class="headerlink" title="浏览器内核"></a>浏览器内核</h4><p><strong>渲染引擎</strong>：负责读取网页内容，整理信息，计算网页的显示方式并显示页面。</p><p>详细内涵：1. 浏览器最重要或者说核心的部分是“Rendering Engine”，可大概译为“渲染引擎”。</p><ol start="2"><li><p>负责责对网页语法的解释（如<a href="https://baike.baidu.com/item/%E6%A0%87%E5%87%86%E9%80%9A%E7%94%A8%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/6805073">标准通用标记语言</a>下的一个应用<a href="https://baike.baidu.com/item/HTML">HTML</a>、<a href="https://baike.baidu.com/item/JavaScript">JavaScript</a>）并渲染（显示）网页。</p></li><li><p>常所谓的浏览器内核也就是浏览器所采用的<a href="https://baike.baidu.com/item/%E6%B8%B2%E6%9F%93%E5%BC%95%E6%93%8E/10982158">渲染引擎</a>，渲染引擎决定了浏览器如何显示网页的内容以及页面的格式信息。</p></li><li><p>不同的浏览器内核对网页编写语法的解释也有不同，因此同一网页在不同的内核的浏览器里的渲染（显示）效果也可能不同，这也是网页编写者需要在不同内核的浏览器中测试网页显示效果的原因。</p></li></ol><table><thead><tr><th align="left">浏览器</th><th>内核</th><th>其他</th></tr></thead><tbody><tr><td align="left">IE</td><td>Trident</td><td>猎豹，360极速浏览器，百度</td></tr><tr><td align="left">firefox</td><td>Gecko</td><td></td></tr><tr><td align="left">Safari</td><td>Webkit</td><td>UC，搜狗，qq，360</td></tr><tr><td align="left">chrome/Opera</td><td>Blink</td><td>Blink是Webkit的分支</td></tr></tbody></table><h3 id="Web标准"><a href="#Web标准" class="headerlink" title="Web标准"></a>Web<strong>标准</strong></h3><p>W3C组织和其他标准化组织制定的一系列标准的集合。</p><p>W3C（万维网联盟）：国际最著名的标准化组织。</p><h4 id="为什么需要web标准"><a href="#为什么需要web标准" class="headerlink" title="为什么需要web标准"></a>为什么需要web标准</h4><p>由于浏览器有多种版本，并且浏览器不同，他们的渲染引擎不同，所解析的html文件显示的页面或者排版就有些许差异。</p><p>遵循标砖让开发人员写出的页面更标准统一。</p><ol><li>让Web的发展前景更广阔。</li><li>内容能被更广泛的设备访问。</li><li>更容易被搜索引擎搜索。</li><li>降低网站流量费用。</li><li>使网站更易于维护。</li><li>提高页面浏览速度。</li></ol><h4 id="web标准的构成"><a href="#web标准的构成" class="headerlink" title="web标准的构成"></a>web标准的构成</h4><p>最佳体验方案：结构、样式、行为相分离</p><p>不同文件分类分开写</p><p>主要包括：</p><p>结构（Structure）：用于对网页元素进行整理和分类。HTML</p><p>表现（Presentation）：用于设置网页元素的排版、颜色、大小、外观样式。CSS</p><p>行为（Behavior）：网页模型的定义以及交互的编写。Javascript</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 2021前端教案参考 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 2021前端教案参考 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>html标签</title>
       <link href="2021/05/25/%E6%A0%87%E7%AD%BE/"/>
       <url>2021/05/25/%E6%A0%87%E7%AD%BE/</url>
