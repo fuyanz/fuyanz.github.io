@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="基础知识点, flyall">
+    <meta name="keywords" content="HTML标签, flyall">
     <meta name="description" content="flyall的博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>基础知识点 | flyall</title>
+    <title>HTML标签 | flyall</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">基础知识点</h1>
+                    <h1 class="description center-align post-title">HTML标签</h1>
                 </div>
             </div>
         </div>
@@ -456,14 +456,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-28
+                    2021-05-31
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-28
+                    2021-05-31
                 </div>
                 
 
@@ -485,94 +485,330 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="基础知识点"><a href="#基础知识点" class="headerlink" title="基础知识点"></a>基础知识点</h1><h2 id="网页"><a href="#网页" class="headerlink" title="网页"></a>网页</h2><h3 id="什么是网页？"><a href="#什么是网页？" class="headerlink" title="什么是网页？"></a>什么是网页？</h3><p><strong>网站</strong>是指在因特网上根据一定的规则，使用HTML等制作的用于展示特定内容相关的网页集合。</p>
-<p><strong>网页</strong>是网站中的一“页”，通常是 <strong>HTML格式的文件</strong>，它要通过浏览器来阅读。</p>
-<p><strong>网页是构成网站的基本元素，</strong>它通常由图片、链接、文字、声音、视频、等元素构成。通常我们看到的网页，以**.htm<strong>或 <strong>.html</strong>后缀结尾的文件，因此将其俗称为</strong>HTML文件**。</p>
-<p><em>因特网</em>：（internet）</p>
-<p>是一组全球信息资源的总汇。</p>
-<p>因特网的作用：以相互交流信息资源为目的，基于一些共同的协议，并通过许多<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%B7%AF%E7%94%B1%E5%99%A8/108294">路由器</a>和公共互联网而成，它是一个信息资源和资源共享的集合。</p>
-<p><em>后缀</em>：.doc,.docx,.png,.jpg</p>
-<h3 id="什么是HTML"><a href="#什么是HTML" class="headerlink" title="什么是HTML?"></a>什么是HTML?</h3><p><strong>HTML</strong>指的是<strong>超文本标记语言（Hyper Text Markup Language）</strong>，它是用来描述网页的一种语言。</p>
-<p>html不是一种编程语言，而是一种标记语言（markup language）。</p>
-<p>标记语言是一套标记标签（markup tag）。</p>
-<h4 id="超文本"><a href="#超文本" class="headerlink" title="超文本"></a><strong>超文本</strong></h4><p>含义：</p>
-<ol>
-<li>它可以加入图片、声音、动画、多媒体等内容（超越了文本限制)。</li>
+                <h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h2 id="HTML语法规范"><a href="#HTML语法规范" class="headerlink" title="HTML语法规范"></a>HTML语法规范</h2><h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><ol>
+<li>HTML标签是<strong>由尖括号包围的关键词</strong>，例如&lt; html &gt;</li>
+<li>HTML标签通常是<strong>成对出现的</strong>，例如&lt; html &gt;&lt; /html &gt;,我们把这么一对标签称为<strong>双标签</strong>。标签对中第一个标签是开始标签，第二个标签是结束标签。</li>
+<li>有些特殊标签是单个标签。&lt; img /&gt;,称为单标签。</li>
 </ol>
-<p>文本文档中只能是文本。</p>
+<h3 id="标签关系"><a href="#标签关系" class="headerlink" title="标签关系"></a>标签关系</h3><ol>
+<li>包含(父子)</li>
+</ol>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>head是title的父</p>
+<p>title是head的子</p>
 <ol start="2">
-<li>可以从一个文件跳转到另一个文件，与世界各地主机的文件连接（超链接文本）。</li>
+<li>并列</li>
 </ol>
-<h3 id="网页的形成？"><a href="#网页的形成？" class="headerlink" title="网页的形成？"></a>网页的形成？</h3><h4 id="网页的形成"><a href="#网页的形成" class="headerlink" title="网页的形成"></a>网页的形成</h4><p>网页是由网页元素组成的，这些元素是利用html标签描述出来，然后通过浏览器解析来展示给用户的。</p>
-<p>开发代码（html文件等文件）—–&gt;浏览器显示代码（解析、渲染）———&gt;Web页面（用户眼中各种各样的页面）</p>
-<p>总结：网页是图片、链接、文字、声音、视频等元素组成，其实就是一个html文件（后缀为.html)的文件。</p>
-<p>网页如何生成：前端人员书写HTML文件，浏览器打开文件，就能看到网页了。</p>
-<h3 id="常用浏览器"><a href="#常用浏览器" class="headerlink" title="常用浏览器"></a>常用浏览器</h3><h4 id="常用的浏览器"><a href="#常用的浏览器" class="headerlink" title="常用的浏览器"></a>常用的浏览器</h4><p>浏览器是网页显示、运行的平台。</p>
-<p>常用的五大浏览器：</p>
-<ol>
-<li>IE   Edge</li>
-<li>火狐（Firefox）</li>
-<li>谷歌（Chrome）</li>
-<li>Safari</li>
-<li>Opera</li>
-</ol>
-<h4 id="浏览器内核"><a href="#浏览器内核" class="headerlink" title="浏览器内核"></a>浏览器内核</h4><p><strong>渲染引擎</strong>：负责读取网页内容，整理信息，计算网页的显示方式并显示页面。</p>
-<p>详细内涵：1. 浏览器最重要或者说核心的部分是“Rendering Engine”，可大概译为“渲染引擎”。</p>
-<ol start="2">
-<li><p>负责责对网页语法的解释（如<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%A0%87%E5%87%86%E9%80%9A%E7%94%A8%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/6805073">标准通用标记语言</a>下的一个应用<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/HTML">HTML</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/JavaScript">JavaScript</a>）并渲染（显示）网页。</p>
-</li>
-<li><p>常所谓的浏览器内核也就是浏览器所采用的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%B8%B2%E6%9F%93%E5%BC%95%E6%93%8E/10982158">渲染引擎</a>，渲染引擎决定了浏览器如何显示网页的内容以及页面的格式信息。</p>
-</li>
-<li><p>不同的浏览器内核对网页编写语法的解释也有不同，因此同一网页在不同的内核的浏览器里的渲染（显示）效果也可能不同，这也是网页编写者需要在不同内核的浏览器中测试网页显示效果的原因。</p>
-</li>
-</ol>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>head和body互为兄弟</p>
+<h2 id="HTML基本结构标签"><a href="#HTML基本结构标签" class="headerlink" title="HTML基本结构标签"></a>HTML基本结构标签</h2><h3 id="第一个HTML网页"><a href="#第一个HTML网页" class="headerlink" title="第一个HTML网页"></a>第一个HTML网页</h3><p>每个网页都会有一个基本的结构标签（也叫作骨架标签），页面的内容被书写在基本标签内。</p>
+<p>html页面也被称为HTML文档。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>我的页面的标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+        这是页面的内容书写位置
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <table>
 <thead>
 <tr>
-<th align="left">浏览器</th>
-<th>内核</th>
-<th>其他</th>
+<th>标签名</th>
+<th>定义</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="left">IE</td>
-<td>Trident</td>
-<td>猎豹，360极速浏览器，百度</td>
+<td>&lt; html&gt;&lt; /html&gt;</td>
+<td>html标签</td>
+<td>页面中最大的标签，被称为根标签</td>
 </tr>
 <tr>
-<td align="left">firefox</td>
-<td>Gecko</td>
+<td>&lt; head&gt;&lt; /head&gt;</td>
+<td>文档的头部</td>
+<td>注意在head标签中我们必须设置的标签是title标签</td>
+</tr>
+<tr>
+<td>&lt; title&gt;&lt; /title&gt;</td>
+<td>文档的标题</td>
+<td>让页面拥有一个属于自己的网页标题</td>
+</tr>
+<tr>
+<td>&lt; body&gt;&lt; /body&gt;</td>
+<td>文档的主体</td>
+<td>元素包含文档的所有内容，页面内容基本都是放到body里</td>
+</tr>
+</tbody></table>
+<h3 id="文档类型声明标签"><a href="#文档类型声明标签" class="headerlink" title="文档类型声明标签"></a>文档类型声明标签</h3><p>**&lt;!DOCTYPE&gt;**文档类型声明，作用就是告诉浏览器使用哪种HTML版本来显示网页。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>!DOCPYTE</span> <span class="token attr-name">html</span><span class="token punctuation">></span></span>
+告诉浏览器当前页面采用html5版本来显示网页<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>声明位于文档最前端</p>
+<p>不是一个HTML标签。就是一个文档类型声明标签。</p>
+<h3 id="lang语言种类"><a href="#lang语言种类" class="headerlink" title="lang语言种类"></a>lang语言种类</h3><p>用于定义当前文档显示的语言。</p>
+<ol>
+<li><p>en定义语言为英语。 en英文网页</p>
+</li>
+<li><p>zh-CN定义语言为中文。 zh-CN中文网页</p>
+</li>
+</ol>
+<h3 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h3><p>字符集（Character set）是多个字符的集合。用来让计算机识别和存储各种文字。</p>
+<p>通过 **&lt; mata &gt;**标签的 <strong>charset</strong>属性来规定HTML文档应该使用哪种字符编码。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mata</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>charset常用的值有：GB2312、BIG5、GBK、UTF-8，<strong>UTF-8</strong>被称为万国码，基本包含了全世界所有国家需要用到的字符。</p>
+<h3 id="标签语义"><a href="#标签语义" class="headerlink" title="标签语义"></a>标签语义</h3><p>标签的含义，标签用来干嘛的</p>
+<p><strong>在合适的地方根据标签的语义选择最合理的标签，可以让页面结构更清晰</strong></p>
+<h3 id="标题标签-lt-h1-gt-lt-h6-gt"><a href="#标题标签-lt-h1-gt-lt-h6-gt" class="headerlink" title="标题标签&lt; h1 &gt;~&lt; h6 &gt;"></a>标题标签&lt; h1 &gt;~&lt; h6 &gt;</h3><p>6个等级的标题标签</p>
+<p>head的缩写，头部；标题</p>
+<p>作为标签使用，并根据重要性递减</p>
+<p>一般网页只出现一个一级标签</p>
+<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ol>
+<li>加了标题标签的文字会加粗，字号变大。</li>
+<li>一个标签独占一行。</li>
+</ol>
+<h3 id="段落和换行标签"><a href="#段落和换行标签" class="headerlink" title="段落和换行标签"></a>段落和换行标签</h3><p>**&lt; p &gt;**标签用于定义段落。将文字分段显示。paragraph的缩写。</p>
+<h4 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h4><ol>
+<li>文本在一个段落中会根据浏览器窗口的大小自动换行。</li>
+<li>段落和段落之间有空隙。</li>
+</ol>
+<p>**&lt; br/&gt;**强制换行某段文字。</p>
+<p>在html中，一个段落中的文字会从左到右依次排列，直到浏览器窗口的右端，然后才自动换行。如果希望强制换行某段文字，就可以使用&lt; br /&gt;</p>
+<p>break 打断，换行。</p>
+<h4 id="特点-2"><a href="#特点-2" class="headerlink" title="特点"></a>特点</h4><ol>
+<li>&lt; br/&gt;是个单标签。</li>
+<li>&lt; br/&gt;只是简单的开始新的一行，和段落不一样，段落之间只会插入一些垂直的间距。</li>
+</ol>
+<h3 id="文本格式化标签"><a href="#文本格式化标签" class="headerlink" title="文本格式化标签"></a>文本格式化标签</h3><p>在网页中给一些文字设置特殊效果。</p>
+<p>标签语义：突出重要性，比普通文字更重要。</p>
+<table>
+<thead>
+<tr>
+<th>语义</th>
+<th>标签</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>加粗</td>
+<td>&lt; strong&gt;或&lt; b&gt;</td>
+<td>推荐使用strong 语义更强烈</td>
+</tr>
+<tr>
+<td>倾斜</td>
+<td>&lt; em&gt;或&lt; i&gt;</td>
+<td>推荐em</td>
+</tr>
+<tr>
+<td>删除线</td>
+<td>&lt; del&gt;或&lt; s&gt;</td>
+<td>推荐del</td>
+</tr>
+<tr>
+<td>下划线</td>
+<td>&lt; ins&gt;或&lt; u&gt;</td>
+<td>推荐ins</td>
+</tr>
+</tbody></table>
+<h3 id="lt-div-gt-和-lt-span-gt-标签"><a href="#lt-div-gt-和-lt-span-gt-标签" class="headerlink" title="&lt; div &gt;和&lt; span &gt;标签"></a>&lt; div &gt;和&lt; span &gt;标签</h3><p>没有语义，就是一个盒子，用来装内容的。</p>
+<p>div是divsion的缩写，分割；分区。</p>
+<p>span 跨度、跨距。</p>
+<h4 id="特点-3"><a href="#特点-3" class="headerlink" title="特点"></a>特点</h4><ol>
+<li><p>div标签用来布局，在一行只能放置一个&lt; div &gt;大盒子</p>
+</li>
+<li><p>span标签用来布局，一行可以放置多个&lt; span &gt; 小盒子</p>
+</li>
+</ol>
+<h3 id="图像标签"><a href="#图像标签" class="headerlink" title="图像标签"></a>图像标签</h3><p>图像标签：&lt; img /&gt;单标签，用于定义html页面中的图像。</p>
+<p>image的缩写：图像</p>
+<p>&lt; img src=”图像路径” /&gt;</p>
+<p>src是img标签的必须属性，用于指定图像文件的路径和文件名。</p>
+<p>属性：属于这个标签的特性。</p>
+<p>其他属性：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>属性值</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>src</td>
+<td>图片路径</td>
+<td>必须属性</td>
+</tr>
+<tr>
+<td>alt</td>
+<td>文本</td>
+<td>替换文本，图片不能显示时的文字</td>
+</tr>
+<tr>
+<td>title</td>
+<td>文本</td>
+<td>提示文本，鼠标放到图片上显示的文本</td>
+</tr>
+<tr>
+<td>width</td>
+<td>像素</td>
+<td>设置图像的宽度</td>
+</tr>
+<tr>
+<td>height</td>
+<td>像素</td>
+<td>设置图像的高度</td>
+</tr>
+<tr>
+<td>border</td>
+<td>像素</td>
+<td>设置图像的边框粗细</td>
+</tr>
+</tbody></table>
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><ol>
+<li>图像标签可以拥有多个属性，必须写在标签名的后面</li>
+<li>属性之间不分先后顺序，标签名与属性之间均以空格隔开</li>
+<li>属性采取键值对的格式，key=”value”,属性=”属性值“</li>
+</ol>
+<h3 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h3><p>目录文件夹和根目录：文件分类管理，放在一个文件夹</p>
+<p><strong>目录文件夹：</strong>普通文件夹</p>
+<p><strong>根目录：</strong>打开目录文件夹的第一层</p>
+<p><strong>相对路径：</strong>以引用文件所在位置为参考基础，而建立的目录路径。</p>
+<table>
+<thead>
+<tr>
+<th>同一级路径</th>
+<th>符号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
 <td></td>
 </tr>
 <tr>
-<td align="left">Safari</td>
-<td>Webkit</td>
-<td>UC，搜狗，qq，360</td>
+<td>下一级路径</td>
+<td>/</td>
 </tr>
 <tr>
-<td align="left">chrome/Opera</td>
-<td>Blink</td>
-<td>Blink是Webkit的分支</td>
+<td>上一级路径</td>
+<td>../</td>
 </tr>
 </tbody></table>
-<h3 id="Web标准"><a href="#Web标准" class="headerlink" title="Web标准"></a>Web<strong>标准</strong></h3><p>W3C组织和其他标准化组织制定的一系列标准的集合。</p>
-<p>W3C（万维网联盟）：国际最著名的标准化组织。</p>
-<h4 id="为什么需要web标准"><a href="#为什么需要web标准" class="headerlink" title="为什么需要web标准"></a>为什么需要web标准</h4><p>由于浏览器有多种版本，并且浏览器不同，他们的渲染引擎不同，所解析的html文件显示的页面或者排版就有些许差异。</p>
-<p>遵循标砖让开发人员写出的页面更标准统一。</p>
-<ol>
-<li>让Web的发展前景更广阔。</li>
-<li>内容能被更广泛的设备访问。</li>
-<li>更容易被搜索引擎搜索。</li>
-<li>降低网站流量费用。</li>
-<li>使网站更易于维护。</li>
-<li>提高页面浏览速度。</li>
+<p>从代码所在的位置出发，去寻找目标文件。</p>
+<p><strong>绝对路径：</strong>目录下的绝对位置，直接到达目标位置，就是盘符开始的路径。</p>
+<h3 id="超链接标签-lt-a-gt"><a href="#超链接标签-lt-a-gt" class="headerlink" title="超链接标签&lt; a &gt;"></a>超链接标签&lt; a &gt;</h3><p>a标签用于定义超链接，从一个页面链接到另一个页面。</p>
+<p>&lt; a href=”跳转目标” target=”目标窗口的弹出方式”&gt; 文本或图像&lt; /a &gt;</p>
+<p>anchor 锚</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>href</td>
+<td>指定链接目标的url地址，必须属性</td>
+</tr>
+<tr>
+<td>target</td>
+<td>指定链接页面的打开方式，_ self为默认值，_ blank在新窗口打开</td>
+</tr>
+</tbody></table>
+<h4 id="链接分类"><a href="#链接分类" class="headerlink" title="链接分类"></a>链接分类</h4><ol>
+<li>外部链接：如跳转到百度。</li>
+<li>内部链接：网站内部页面之间的相互链接，直接链接内部页面名称。</li>
+<li>空链接：#。</li>
+<li>下载链接：href里面的地址是一个文件或者压缩包。</li>
+<li>网页元素链接：在网页中的各种网页元素都可以添加超链接。</li>
+<li>锚点链接：点击链接快速定位到页面中的某个位置。<ul>
+<li>在链接文本的href属性中，设置属性值为 <strong>#名字</strong>的形式。</li>
+<li>在目标位置标签中添加id属性=刚才的名字。</li>
+</ul>
+</li>
 </ol>
-<h4 id="web标准的构成"><a href="#web标准的构成" class="headerlink" title="web标准的构成"></a>web标准的构成</h4><p>最佳体验方案：结构、样式、行为相分离</p>
-<p>不同文件分类分开写</p>
-<p>主要包括：</p>
-<p>结构（Structure）：用于对网页元素进行整理和分类。HTML</p>
-<p>表现（Presentation）：用于设置网页元素的排版、颜色、大小、外观样式。CSS</p>
-<p>行为（Behavior）：网页模型的定义以及交互的编写。Javascript</p>
+<h3 id="注释标签"><a href="#注释标签" class="headerlink" title="注释标签"></a>注释标签</h3><p>给代码人员便于理解和阅读，但不需要显示在页面。</p>
+<p>&lt; !—      —&gt;</p>
+<h3 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h3><table>
+<thead>
+<tr>
+<th></th>
+<th>描述</th>
+<th>字符的代码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>空格</td>
+<td>&amp; nbsp;</td>
+</tr>
+<tr>
+<td></td>
+<td>小于号</td>
+<td>&amp; lt;</td>
+</tr>
+<tr>
+<td></td>
+<td>大于号</td>
+<td>&amp; gt;</td>
+</tr>
+<tr>
+<td></td>
+<td>和号</td>
+<td>&amp; amp;</td>
+</tr>
+<tr>
+<td></td>
+<td>人民币</td>
+<td>&amp; yen;</td>
+</tr>
+<tr>
+<td></td>
+<td>版权</td>
+<td>&amp; copy;</td>
+</tr>
+<tr>
+<td></td>
+<td>注册商标</td>
+<td>&amp; reg;</td>
+</tr>
+<tr>
+<td></td>
+<td>摄氏度</td>
+<td>&amp; deg;</td>
+</tr>
+<tr>
+<td></td>
+<td>正负号</td>
+<td>&amp; plusmn;</td>
+</tr>
+<tr>
+<td></td>
+<td>乘号</td>
+<td>&amp; times;</td>
+</tr>
+<tr>
+<td></td>
+<td>除号</td>
+<td>&amp; divide;</td>
+</tr>
+<tr>
+<td></td>
+<td>上标2</td>
+<td>&amp; sup2;</td>
+</tr>
+<tr>
+<td></td>
+<td>上标3</td>
+<td>&amp; sup3;</td>
+</tr>
+</tbody></table>
 
                 
             </div>
@@ -599,7 +835,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://fuyanz.github.io/2021/05/28/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/">https://fuyanz.github.io/2021/05/28/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/</a>
+                    <a href="https://fuyanz.github.io/2021/05/31/HTML%E6%A0%87%E7%AD%BE/">https://fuyanz.github.io/2021/05/31/HTML%E6%A0%87%E7%AD%BE/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -808,9 +1044,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/05/31/HTML%E6%A0%87%E7%AD%BE/">
                     <div class="card-image">
@@ -828,9 +1065,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-31
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -843,6 +1080,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -861,35 +1099,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/05/25/%E6%A0%87%E7%AD%BE/">
+                <a href="/2021/05/28/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="html标签">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="基础知识点">
                         
-                        <span class="card-title">html标签</span>
+                        <span class="card-title">基础知识点</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            html标签
+                            基础知识点
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-28
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="post-category">
-                                    基础知识
-                                </a>
-                            
-                            <a href="/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="post-category">
-                                    前端基础知识
+                            <a href="/categories/2021%E5%89%8D%E7%AB%AF%E6%95%99%E6%A1%88%E5%8F%82%E8%80%83/" class="post-category">
+                                    2021前端教案参考
                                 </a>
                             
                             
@@ -899,12 +1133,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
-                        <span class="chip bg-color">基础知识</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
-                        <span class="chip bg-color">前端基础知识</span>
+                    <a href="/tags/2021%E5%89%8D%E7%AB%AF%E6%95%99%E6%A1%88%E5%8F%82%E8%80%83/">
+                        <span class="chip bg-color">2021前端教案参考</span>
                     </a>
                     
                 </div>
