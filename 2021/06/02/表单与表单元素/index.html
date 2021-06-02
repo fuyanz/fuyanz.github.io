@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="HTML标签, flyall">
+    <meta name="keywords" content="表单与表单元素, flyall">
     <meta name="description" content="flyall的博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>HTML标签 | flyall</title>
+    <title>表单与表单元素 | flyall</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">HTML标签</h1>
+                    <h1 class="description center-align post-title">表单与表单元素</h1>
                 </div>
             </div>
         </div>
@@ -456,14 +456,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-31
+                    2021-06-02
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-31
+                    2021-06-02
                 </div>
                 
 
@@ -485,153 +485,163 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h2 id="HTML语法规范"><a href="#HTML语法规范" class="headerlink" title="HTML语法规范"></a>HTML语法规范</h2><h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><ol>
-<li>HTML标签是<strong>由尖括号包围的关键词</strong>，例如&lt; html &gt;</li>
-<li>HTML标签通常是<strong>成对出现的</strong>，例如&lt; html &gt;&lt; /html &gt;,我们把这么一对标签称为<strong>双标签</strong>。标签对中第一个标签是开始标签，第二个标签是结束标签。</li>
-<li>有些特殊标签是单个标签。&lt; img /&gt;,称为单标签。</li>
-</ol>
-<h3 id="标签关系"><a href="#标签关系" class="headerlink" title="标签关系"></a>标签关系</h3><ol>
-<li>包含(父子)</li>
-</ol>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+                <h1 id="表格和表单标签"><a href="#表格和表单标签" class="headerlink" title="表格和表单标签"></a>表格和表单标签</h1><p>主要用于显示、展示数据。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>单元格内的文字<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>head是title的父</p>
-<p>title是head的子</p>
-<ol start="2">
-<li>并列</li>
-</ol>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>head和body互为兄弟</p>
-<h2 id="HTML基本结构标签"><a href="#HTML基本结构标签" class="headerlink" title="HTML基本结构标签"></a>HTML基本结构标签</h2><h3 id="第一个HTML网页"><a href="#第一个HTML网页" class="headerlink" title="第一个HTML网页"></a>第一个HTML网页</h3><p>每个网页都会有一个基本的结构标签（也叫作骨架标签），页面的内容被书写在基本标签内。</p>
-<p>html页面也被称为HTML文档。</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>我的页面的标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-        这是页面的内容书写位置
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<table>
-<thead>
-<tr>
-<th>标签名</th>
-<th>定义</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>&lt; html&gt;&lt; /html&gt;</td>
-<td>html标签</td>
-<td>页面中最大的标签，被称为根标签</td>
-</tr>
-<tr>
-<td>&lt; head&gt;&lt; /head&gt;</td>
-<td>文档的头部</td>
-<td>注意在head标签中我们必须设置的标签是title标签</td>
-</tr>
-<tr>
-<td>&lt; title&gt;&lt; /title&gt;</td>
-<td>文档的标题</td>
-<td>让页面拥有一个属于自己的网页标题</td>
-</tr>
-<tr>
-<td>&lt; body&gt;&lt; /body&gt;</td>
-<td>文档的主体</td>
-<td>元素包含文档的所有内容，页面内容基本都是放到body里</td>
-</tr>
-</tbody></table>
-<h3 id="文档类型声明标签"><a href="#文档类型声明标签" class="headerlink" title="文档类型声明标签"></a>文档类型声明标签</h3><p>**&lt;!DOCTYPE&gt;**文档类型声明，作用就是告诉浏览器使用哪种HTML版本来显示网页。</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>!DOCPYTE</span> <span class="token attr-name">html</span><span class="token punctuation">></span></span>
-告诉浏览器当前页面采用html5版本来显示网页<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>声明位于文档最前端</p>
-<p>不是一个HTML标签。就是一个文档类型声明标签。</p>
-<h3 id="lang语言种类"><a href="#lang语言种类" class="headerlink" title="lang语言种类"></a>lang语言种类</h3><p>用于定义当前文档显示的语言。</p>
 <ol>
-<li><p>en定义语言为英语。 en英文网页</p>
-</li>
-<li><p>zh-CN定义语言为中文。 zh-CN中文网页</p>
-</li>
+<li>&lt; table &gt;&lt; /table &gt;定义表格的标签。</li>
+<li>&lt; tr &gt;&lt; /tr &gt; 定义表格中的行，必须嵌套在table标签内部。</li>
+<li>&lt; td &gt;&lt; /td &gt;定义表格中的单元格，必须嵌套在tr标签中。</li>
+<li>td table data，数据单元格的内容。</li>
 </ol>
-<h3 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h3><p>字符集（Character set）是多个字符的集合。用来让计算机识别和存储各种文字。</p>
-<p>通过 **&lt; mata &gt;**标签的 <strong>charset</strong>属性来规定HTML文档应该使用哪种字符编码。</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mata</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>charset常用的值有：GB2312、BIG5、GBK、UTF-8，<strong>UTF-8</strong>被称为万国码，基本包含了全世界所有国家需要用到的字符。</p>
-<h3 id="标签语义"><a href="#标签语义" class="headerlink" title="标签语义"></a>标签语义</h3><p>标签的含义，标签用来干嘛的</p>
-<p><strong>在合适的地方根据标签的语义选择最合理的标签，可以让页面结构更清晰</strong></p>
-<h3 id="标题标签-lt-h1-gt-lt-h6-gt"><a href="#标题标签-lt-h1-gt-lt-h6-gt" class="headerlink" title="标题标签&lt; h1 &gt;~&lt; h6 &gt;"></a>标题标签&lt; h1 &gt;~&lt; h6 &gt;</h3><p>6个等级的标题标签</p>
-<p>head的缩写，头部；标题</p>
-<p>作为标签使用，并根据重要性递减</p>
-<p>一般网页只出现一个一级标签</p>
-<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ol>
-<li>加了标题标签的文字会加粗，字号变大。</li>
-<li>一个标签独占一行。</li>
-</ol>
-<h3 id="段落和换行标签"><a href="#段落和换行标签" class="headerlink" title="段落和换行标签"></a>段落和换行标签</h3><p>**&lt; p &gt;**标签用于定义段落。将文字分段显示。paragraph的缩写。</p>
-<h4 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h4><ol>
-<li>文本在一个段落中会根据浏览器窗口的大小自动换行。</li>
-<li>段落和段落之间有空隙。</li>
-</ol>
-<p>**&lt; br/&gt;**强制换行某段文字。</p>
-<p>在html中，一个段落中的文字会从左到右依次排列，直到浏览器窗口的右端，然后才自动换行。如果希望强制换行某段文字，就可以使用&lt; br /&gt;</p>
-<p>break 打断，换行。</p>
-<h4 id="特点-2"><a href="#特点-2" class="headerlink" title="特点"></a>特点</h4><ol>
-<li>&lt; br/&gt;是个单标签。</li>
-<li>&lt; br/&gt;只是简单的开始新的一行，和段落不一样，段落之间只会插入一些垂直的间距。</li>
-</ol>
-<h3 id="文本格式化标签"><a href="#文本格式化标签" class="headerlink" title="文本格式化标签"></a>文本格式化标签</h3><p>在网页中给一些文字设置特殊效果。</p>
-<p>标签语义：突出重要性，比普通文字更重要。</p>
-<table>
+<h2 id="表头单元格标签"><a href="#表头单元格标签" class="headerlink" title="表头单元格标签"></a>表头单元格标签</h2><p>表头单元格位于表格的第一行或第一列，表头单元格里面的文本内容加粗居中显示。</p>
+<p>&lt; th &gt;标签用于定于表头部分（table head）</p>
+<h2 id="表格属性"><a href="#表格属性" class="headerlink" title="表格属性"></a>表格属性</h2><table>
 <thead>
 <tr>
-<th>语义</th>
-<th>标签</th>
-<th>说明</th>
+<th>属性名</th>
+<th>属性值</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>加粗</td>
-<td>&lt; strong&gt;或&lt; b&gt;</td>
-<td>推荐使用strong 语义更强烈</td>
+<td>align</td>
+<td>left、center、right</td>
+<td>规定表哥相对周围元素的对齐方式</td>
 </tr>
 <tr>
-<td>倾斜</td>
-<td>&lt; em&gt;或&lt; i&gt;</td>
-<td>推荐em</td>
+<td>border</td>
+<td>1或空</td>
+<td>默认无边框</td>
 </tr>
 <tr>
-<td>删除线</td>
-<td>&lt; del&gt;或&lt; s&gt;</td>
-<td>推荐del</td>
+<td>cellpadding</td>
+<td>像素值</td>
+<td>单元边缘与其内容之间的空白，默认1像素。</td>
 </tr>
 <tr>
-<td>下划线</td>
-<td>&lt; ins&gt;或&lt; u&gt;</td>
-<td>推荐ins</td>
+<td>cellspacing</td>
+<td>像素值</td>
+<td>规定单元格之间的空白，默认2像素</td>
+</tr>
+<tr>
+<td>width</td>
+<td>像素或百分比</td>
+<td>规定表格的宽度</td>
 </tr>
 </tbody></table>
-<h3 id="lt-div-gt-和-lt-span-gt-标签"><a href="#lt-div-gt-和-lt-span-gt-标签" class="headerlink" title="&lt; div &gt;和&lt; span &gt;标签"></a>&lt; div &gt;和&lt; span &gt;标签</h3><p>没有语义，就是一个盒子，用来装内容的。</p>
-<p>div是divsion的缩写，分割；分区。</p>
-<p>span 跨度、跨距。</p>
-<h4 id="特点-3"><a href="#特点-3" class="headerlink" title="特点"></a>特点</h4><ol>
-<li><p>div标签用来布局，在一行只能放置一个&lt; div &gt;大盒子</p>
-</li>
-<li><p>span标签用来布局，一行可以放置多个&lt; span &gt; 小盒子</p>
-</li>
+<h2 id="表格结构标签"><a href="#表格结构标签" class="headerlink" title="表格结构标签"></a>表格结构标签</h2><p>为了更好的表示表格的语义，可以将表格氛围表哥头部和表格主体两大部分。</p>
+<p>&lt; thead &gt;用于表示表格的头部区域。</p>
+<p>​    内部必须拥有tr标签，一般位于第一行。</p>
+<p>&lt; tbody &gt;用于表示表格的主体部分。</p>
+<h2 id="合并单元格"><a href="#合并单元格" class="headerlink" title="合并单元格"></a>合并单元格</h2><h3 id="跨行合并rowspan-“合并单元格的个数”"><a href="#跨行合并rowspan-“合并单元格的个数”" class="headerlink" title="跨行合并rowspan=“合并单元格的个数”"></a>跨行合并rowspan=“合并单元格的个数”</h3><p>最上侧单元格为目标单元格，写合并代码。</p>
+<h3 id="跨列合并colspan-”合并单元格的个数”"><a href="#跨列合并colspan-”合并单元格的个数”" class="headerlink" title="跨列合并colspan=”合并单元格的个数”"></a>跨列合并colspan=”合并单元格的个数”</h3><p>最左侧单元格为目标单元格，写合并代码。</p>
+<h2 id="列表标签"><a href="#列表标签" class="headerlink" title="列表标签"></a>列表标签</h2><p>用来布局，根据使用需要分为:无序列表、有序列表、自定义列表。</p>
+<h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>ul标签表示html页面中项目的无序列表，一般会以项目符号呈现列表项，列表项使用&lt; li &gt;标签定义。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>列表项1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>列表项2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>ul中只能嵌套li。</p>
+<p>li中可以嵌套其他标签。</p>
+<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>&lt; ol &gt;</p>
+<h3 id="自定义列表"><a href="#自定义列表" class="headerlink" title="自定义列表"></a>自定义列表</h3><p>常用语对术语或名词进行解释和描述，定义列表的列表项前没有任何项目符号。</p>
+<p>&lt; dl &gt;定义列表&lt; dt &gt;(定义项目/名字) &lt; dd &gt;（描述每一个项目/名字）</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dl</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span><span class="token punctuation">></span></span>名词1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">></span></span>名词1解释1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">></span></span>名词1解释2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">></span></span>   
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dl</span><span class="token punctuation">></span></span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="表单标签"><a href="#表单标签" class="headerlink" title="表单标签"></a>表单标签</h2><p>收集用户信息，与用户进行交互。</p>
+<h3 id="表单的组成"><a href="#表单的组成" class="headerlink" title="表单的组成"></a>表单的组成</h3><ol>
+<li>表单域</li>
+<li>表单控件（表单元素）</li>
+<li>提示信息</li>
 </ol>
-<h3 id="图像标签"><a href="#图像标签" class="headerlink" title="图像标签"></a>图像标签</h3><p>图像标签：&lt; img /&gt;单标签，用于定义html页面中的图像。</p>
-<p>image的缩写：图像</p>
-<p>&lt; img src=”图像路径” /&gt;</p>
-<p>src是img标签的必须属性，用于指定图像文件的路径和文件名。</p>
-<p>属性：属于这个标签的特性。</p>
-<p>其他属性：</p>
+<h4 id="表单域"><a href="#表单域" class="headerlink" title="表单域"></a>表单域</h4><p>包含表单元素的区域。&lt; form &gt;会把它范围内的表单元素信息提交给服务器。</p>
+<p>&lt; form action=“url地址” method=”提交方式” name=”表单域名” &gt;&lt; /form &gt;</p>
+<h5 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h5><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>属性值</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>action</td>
+<td>url地址</td>
+<td>指定接受并处理表单数据的服务器程序的url地址</td>
+</tr>
+<tr>
+<td>method</td>
+<td>get/post</td>
+<td>设置表单数据的提交方式</td>
+</tr>
+<tr>
+<td>name</td>
+<td>名称</td>
+<td>指定表单的名称</td>
+</tr>
+</tbody></table>
+<h4 id="表单控件"><a href="#表单控件" class="headerlink" title="表单控件"></a>表单控件</h4><p>在表单域中定义各种表单元素，这些表单元素是允许用户在表单中输入或选择的内容控件。</p>
+<h5 id="input输入表单元素"><a href="#input输入表单元素" class="headerlink" title="input输入表单元素"></a>input输入表单元素</h5><p>输入。</p>
+<p>input用于收集用户信息。必须属性type。</p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>button</td>
+<td>按钮</td>
+</tr>
+<tr>
+<td>checkbox</td>
+<td>复选框</td>
+</tr>
+<tr>
+<td>file</td>
+<td>文件</td>
+</tr>
+<tr>
+<td>hidden</td>
+<td>隐藏</td>
+</tr>
+<tr>
+<td>image</td>
+<td>提交图像</td>
+</tr>
+<tr>
+<td>password</td>
+<td>密码</td>
+</tr>
+<tr>
+<td>radio</td>
+<td>单选框</td>
+</tr>
+<tr>
+<td>reset</td>
+<td>重置按钮</td>
+</tr>
+<tr>
+<td>submit</td>
+<td>提交按钮</td>
+</tr>
+<tr>
+<td>text</td>
+<td>文本 默认20个字符</td>
+</tr>
+</tbody></table>
+<p>属性：</p>
 <table>
 <thead>
 <tr>
@@ -641,174 +651,49 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>src</td>
-<td>图片路径</td>
-<td>必须属性</td>
+<td>name</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td>alt</td>
-<td>文本</td>
-<td>替换文本，图片不能显示时的文字</td>
+<td>value</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td>title</td>
-<td>文本</td>
-<td>提示文本，鼠标放到图片上显示的文本</td>
+<td>checked</td>
+<td>checked</td>
+<td>首次加载时被选中</td>
 </tr>
 <tr>
-<td>width</td>
-<td>像素</td>
-<td>设置图像的宽度</td>
-</tr>
-<tr>
-<td>height</td>
-<td>像素</td>
-<td>设置图像的高度</td>
-</tr>
-<tr>
-<td>border</td>
-<td>像素</td>
-<td>设置图像的边框粗细</td>
+<td>maxlength</td>
+<td>正整数</td>
+<td>输入字段的字符最大长度</td>
 </tr>
 </tbody></table>
-<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><ol>
-<li>图像标签可以拥有多个属性，必须写在标签名的后面</li>
-<li>属性之间不分先后顺序，标签名与属性之间均以空格隔开</li>
-<li>属性采取键值对的格式，key=”value”,属性=”属性值“</li>
+<ol>
+<li>name和value要给后台人员使用。</li>
+<li>name的名字要求单选按钮和复选框要有相同的name值。</li>
+<li>checked属性主要针对单选按钮和复选框。</li>
+<li>radio（checkbox）如果是一组，必须命名相同的名字。</li>
 </ol>
-<h3 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h3><p>目录文件夹和根目录：文件分类管理，放在一个文件夹</p>
-<p><strong>目录文件夹：</strong>普通文件夹</p>
-<p><strong>根目录：</strong>打开目录文件夹的第一层</p>
-<p><strong>相对路径：</strong>以引用文件所在位置为参考基础，而建立的目录路径。</p>
-<table>
-<thead>
-<tr>
-<th>同一级路径</th>
-<th>符号</th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>下一级路径</td>
-<td>/</td>
-</tr>
-<tr>
-<td>上一级路径</td>
-<td>../</td>
-</tr>
-</tbody></table>
-<p>从代码所在的位置出发，去寻找目标文件。</p>
-<p><strong>绝对路径：</strong>目录下的绝对位置，直接到达目标位置，就是盘符开始的路径。</p>
-<h3 id="超链接标签-lt-a-gt"><a href="#超链接标签-lt-a-gt" class="headerlink" title="超链接标签&lt; a &gt;"></a>超链接标签&lt; a &gt;</h3><p>a标签用于定义超链接，从一个页面链接到另一个页面。</p>
-<p>&lt; a href=”跳转目标” target=”目标窗口的弹出方式”&gt; 文本或图像&lt; /a &gt;</p>
-<p>anchor 锚</p>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>href</td>
-<td>指定链接目标的url地址，必须属性</td>
-</tr>
-<tr>
-<td>target</td>
-<td>指定链接页面的打开方式，_ self为默认值，_ blank在新窗口打开</td>
-</tr>
-</tbody></table>
-<h4 id="链接分类"><a href="#链接分类" class="headerlink" title="链接分类"></a>链接分类</h4><ol>
-<li>外部链接：如跳转到百度。</li>
-<li>内部链接：网站内部页面之间的相互链接，直接链接内部页面名称。</li>
-<li>空链接：#。</li>
-<li>下载链接：href里面的地址是一个文件或者压缩包。</li>
-<li>网页元素链接：在网页中的各种网页元素都可以添加超链接。</li>
-<li>锚点链接：点击链接快速定位到页面中的某个位置。<ul>
-<li>在链接文本的href属性中，设置属性值为 <strong>#名字</strong>的形式。</li>
-<li>在目标位置标签中添加id属性=刚才的名字。</li>
-</ul>
-</li>
+<h6 id="lt-label-gt-标签为input元素定义标注。"><a href="#lt-label-gt-标签为input元素定义标注。" class="headerlink" title="&lt; label &gt;标签为input元素定义标注。"></a>&lt; label &gt;标签为input元素定义标注。</h6><h5 id="select下拉表单元素"><a href="#select下拉表单元素" class="headerlink" title="select下拉表单元素"></a>select下拉表单元素</h5><p>用于绑定一个表单元素，当点击label标签内的文字的时候，浏览器会自动聚焦到对应的表单元素上，增加用户体验。</p>
+<p><strong>label标签的for属性应当与相关元素的id属性相同。</strong></p>
+<h5 id="select下拉表单"><a href="#select下拉表单" class="headerlink" title="select下拉表单"></a>select下拉表单</h5><p>用于有多个选项让用户选择的时候。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span><span class="token punctuation">></span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span><span class="token punctuation">></span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span><span class="token punctuation">></span></span>3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol>
+<li>select中至少包含一对option。</li>
+<li>在option中定义selected=”selected”，当前选项为默认选中。</li>
 </ol>
-<h3 id="注释标签"><a href="#注释标签" class="headerlink" title="注释标签"></a>注释标签</h3><p>给代码人员便于理解和阅读，但不需要显示在页面。</p>
-<p>&lt; !—      —&gt;</p>
-<h3 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h3><table>
-<thead>
-<tr>
-<th></th>
-<th>描述</th>
-<th>字符的代码</th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td>空格</td>
-<td>&amp; nbsp;</td>
-</tr>
-<tr>
-<td></td>
-<td>小于号</td>
-<td>&amp; lt;</td>
-</tr>
-<tr>
-<td></td>
-<td>大于号</td>
-<td>&amp; gt;</td>
-</tr>
-<tr>
-<td></td>
-<td>和号</td>
-<td>&amp; amp;</td>
-</tr>
-<tr>
-<td></td>
-<td>人民币</td>
-<td>&amp; yen;</td>
-</tr>
-<tr>
-<td></td>
-<td>版权</td>
-<td>&amp; copy;</td>
-</tr>
-<tr>
-<td></td>
-<td>注册商标</td>
-<td>&amp; reg;</td>
-</tr>
-<tr>
-<td></td>
-<td>摄氏度</td>
-<td>&amp; deg;</td>
-</tr>
-<tr>
-<td></td>
-<td>正负号</td>
-<td>&amp; plusmn;</td>
-</tr>
-<tr>
-<td></td>
-<td>乘号</td>
-<td>&amp; times;</td>
-</tr>
-<tr>
-<td></td>
-<td>除号</td>
-<td>&amp; divide;</td>
-</tr>
-<tr>
-<td></td>
-<td>上标2</td>
-<td>&amp; sup2;</td>
-</tr>
-<tr>
-<td></td>
-<td>上标3</td>
-<td>&amp; sup3;</td>
-</tr>
-</tbody></table>
+<h5 id="textarea文本域元素"><a href="#textarea文本域元素" class="headerlink" title="textarea文本域元素"></a>textarea文本域元素</h5><p>用户输入内容较多的情况。</p>
+<p>textarea标签用于定义多行文本输入的控件。</p>
+<p>cols=“每行中的字符数”</p>
+<p>rows=”显示的行数”</p>
 
                 
             </div>
@@ -835,7 +720,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://fuyanz.github.io/2021/05/31/HTML%E6%A0%87%E7%AD%BE/">https://fuyanz.github.io/2021/05/31/HTML%E6%A0%87%E7%AD%BE/</a>
+                    <a href="https://fuyanz.github.io/2021/06/02/%E8%A1%A8%E5%8D%95%E4%B8%8E%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/">https://fuyanz.github.io/2021/06/02/%E8%A1%A8%E5%8D%95%E4%B8%8E%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1044,9 +929,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/06/02/%E8%A1%A8%E5%8D%95%E4%B8%8E%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/">
                     <div class="card-image">
@@ -1064,9 +950,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1079,6 +965,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1097,13 +984,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/05/28/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/">
+                <a href="/2021/05/31/HTML%E6%A0%87%E7%AD%BE/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="基础知识点">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="HTML标签">
                         
-                        <span class="card-title">基础知识点</span>
+                        <span class="card-title">HTML标签</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1114,7 +1001,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-31
                             </span>
                         <span class="publish-author">
                             
